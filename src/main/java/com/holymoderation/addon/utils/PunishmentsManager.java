@@ -25,18 +25,18 @@ public class PunishmentsManager {
         return false;
     }
 
-    public static void Punish(String command, String player, String reason, boolean addVk) {
+    public static void Punish(String punishCommand, String player, String reason, boolean addVk) {
         if (addVk)
-            ChatManager.SendMessage(command + " " + player + " " + reason + " | Вопросы? " + vkUrl + " -s");
+            ChatManager.SendMessage(punishCommand + " " + player + " " + reason + " | Вопросы? " + vkUrl + " -s");
         else
-            ChatManager.SendMessage(command + " " + player + " " + reason + " -s");
+            ChatManager.SendMessage(punishCommand + " " + player + " " + reason + " -s");
 
-        if (command.equals("/mute") || command.equals("/muteip") || command.equals("/tempmute") || command.equals("/tempmuteip"))
+        if (punishCommand.equals("/mute") || punishCommand.equals("/muteip") || punishCommand.equals("/tempmute") || punishCommand.equals("/tempmuteip"))
         {
             Counter.IncreaseInfo("mutes");
         }
 
-        else if (command.equals("/ban") || command.equals("/banip") || command.equals("/tempban"))
+        else if (punishCommand.equals("/ban") || punishCommand.equals("/banip") || punishCommand.equals("/tempban"))
         {
             Counter.IncreaseInfo("bans");
         }

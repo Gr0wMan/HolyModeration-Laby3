@@ -13,18 +13,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/AutoAnyDesk.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/AutoAnyDesk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Counter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Freezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Freezer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Help.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Settings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/ChatManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/ChatManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/PunishmentsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/PunishmentsManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/HolyModeration.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/HolyModeration.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/ChatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/ChatManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/PunishmentsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/PunishmentsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +343,7 @@
       <workItem from="1720352741421" duration="128000" />
       <workItem from="1720352937140" duration="93000" />
       <workItem from="1720353067321" duration="130000" />
-      <workItem from="1720353210479" duration="18962000" />
+      <workItem from="1720353210479" duration="22301000" />
     </task>
     <servers />
   </component>

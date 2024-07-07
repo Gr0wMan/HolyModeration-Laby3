@@ -5,11 +5,14 @@ import java.util.Arrays;
 
 import com.holymoderation.addon.HolyModeration;
 import com.holymoderation.addon.utils.PunishmentsManager;
+import com.labymedia.connect.api.chat.Chat;
 import net.labymod.api.event.Subscribe;
+import net.labymod.api.event.events.client.chat.MessageReceiveEvent;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
 import com.holymoderation.addon.utils.ChatManager;
 import com.holymoderation.addon.utils.Colors;
+import net.minecraft.client.world.DimensionRenderInfo;
 
 public class Freezer {
 
@@ -72,11 +75,7 @@ public class Freezer {
                         ChatManager.ClientMessage(Colors.RED + "Вы никого не проверяете!");
                         return;
                     }
-                    ChatManager.SendMessage("/freezing " + player);
-                    ChatManager.SendMessage("/prova");
-                    player = null;
-                    Timer.SetPlayer(player);
-                    Punishments.SetPlayer(player);
+                    EndCheckOut();
                     break;
                 }
 
@@ -103,11 +102,7 @@ public class Freezer {
                         return;
                     }
                     PunishmentsManager.Punish("/banip", player, time, "2.4 (" + reason + ")", true);
-                    ChatManager.SendMessage("/freezing " + player);
-                    ChatManager.SendMessage("/prova");
-                    player = null;
-                    Punishments.SetPlayer(player);
-                    Timer.SetPlayer(player);
+                    EndCheckOut();
                     break;
                 }
 
@@ -132,6 +127,30 @@ public class Freezer {
 
             HolyModeration.SaveCfg();
         }
+    }
+
+    @Subscribe
+    public void OnMessageReceive(MessageReceiveEvent event) {
+        String receveivedText = event.getComponent().getString();
+
+        if (receveivedText.startsWith("▶ Замороженный игрок " + player)) {
+            String tempPlayer = player;
+            EndCheckOut();
+            if (PunishmentsManager.GetVkUrl() == null) {
+                ChatManager.ClientMessage(Colors.RED + "У вас не установлена ссылка на вк, поэтому игрок, который ливнул с проверки, не был забанен!");
+                ChatManager.ClientMessage(Colors.YELLOW + "Пожалуйста, установите ссылку на вк и забаньте игрока самостоятельно.");
+                return;
+            }
+            PunishmentsManager.Punish("/banip", tempPlayer, "30d", "2.4 (Лив с проверки)", true);
+        }
+    }
+
+    private void EndCheckOut() {
+        ChatManager.SendMessage("/freezing " + player);
+        ChatManager.SendMessage("/prova");
+        player = null;
+        Punishments.SetPlayer(player);
+        Timer.SetPlayer(player);
     }
 
     public static String GetPlayer() {
