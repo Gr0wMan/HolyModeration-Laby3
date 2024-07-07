@@ -13,6 +13,8 @@ import com.holymoderation.addon.utils.*;
 
 public class HolyModeration extends LabyModAddon {
 
+  private static boolean saveCfg = false;
+
   @Override
   public void onEnable() {
     getApi().getEventService().registerListener(this);
@@ -62,7 +64,11 @@ public class HolyModeration extends LabyModAddon {
   }
 
   @Subscribe
-  public void SaveCfg(MessageSendEvent event) {
+  public void SaveCfgCheck(RenderGameOverlayEvent event) {
+    if (!saveCfg) {
+      return;
+    }
+
     HolyModeration.this.getConfig().addProperty("timer_custom_color", Timer.GetCustomColor());
     HolyModeration.this.getConfig().addProperty("timerx", Timer.GetXCoords());
     HolyModeration.this.getConfig().addProperty("timery", Timer.GetYCoords());
@@ -91,5 +97,11 @@ public class HolyModeration extends LabyModAddon {
     HolyModeration.this.getConfig().addProperty("tmutes", Counter.GetTempInfo()[4]);
 
     HolyModeration.this.saveConfig();
+
+    saveCfg = false;
+  }
+
+  public static void SaveCfg() {
+    saveCfg = true;
   }
 }

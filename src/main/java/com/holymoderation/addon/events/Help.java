@@ -1,5 +1,6 @@
 package com.holymoderation.addon.events;
 
+import com.holymoderation.addon.HolyModeration;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
@@ -93,7 +94,6 @@ public class Help {
                     + " - бан на время");
             ChatManager.ClientMessage("");
             ChatManager.ClientMessage(Colors.GREEN + "Ссылки на инструкцию к моду и исходный код можно найти в файле 'README.TXT'");
-
         }
     }
 }

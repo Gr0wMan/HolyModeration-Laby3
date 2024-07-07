@@ -11,8 +11,8 @@ import net.labymod.api.event.events.network.server.LoginServerEvent;
 import org.apache.commons.io.IOUtils;
 
 public class UpdateChecker {
-
-    private static double version = 2.2;
+    /*
+    private static double version = 2.4;
 
     private static boolean needUpdate = false;
 
@@ -31,4 +31,5 @@ public class UpdateChecker {
             ChatManager.ClientMessage(Colors.RED + "Доступна новая версия аддона HolyModeration. Пожалуйста, установите новую версию.");
         }
     }
+    */
 }

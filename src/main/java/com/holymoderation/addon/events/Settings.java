@@ -1,5 +1,6 @@
 package com.holymoderation.addon.events;
 
+import com.holymoderation.addon.HolyModeration;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
@@ -280,6 +281,8 @@ public class Settings {
                     }
                 }
             }
+
+            HolyModeration.SaveCfg();
         }
     }
 }

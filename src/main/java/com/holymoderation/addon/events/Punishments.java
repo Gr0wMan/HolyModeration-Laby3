@@ -1,5 +1,6 @@
 package com.holymoderation.addon.events;
 
+import com.holymoderation.addon.HolyModeration;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
@@ -24,33 +25,35 @@ public class Punishments {
         if (ChatManager.IsArrayContains(ChatManager.PunishmentsCommands, command)) {
             event.setCancelled(true);
             messageSplit = message.split(" ", 3);
-            char lastChar = messageSplit[1].charAt(messageSplit[1].length() - 1);
-            for (int i = 0; i < ChatManager.Chars.length; i++) {
-                if (messageSplit[1].contains(ChatManager.Chars[i])) {
-                    nicknameHasChar = true;
-                    break;
+            if (messageSplit.length > 1) {
+                char lastChar = messageSplit[1].charAt(messageSplit[1].length() - 1);
+                for (int i = 0; i < ChatManager.Chars.length; i++) {
+                    if (messageSplit[1].contains(ChatManager.Chars[i])) {
+                        nicknameHasChar = true;
+                        break;
+                    }
                 }
-            }
-            if (nicknameHasChar) {
-                ChatManager.ClientMessage(Colors.RED + "Некорректный никнейм!");
-                return;
-            }
-            if ((lastChar == 'h' || lastChar == 'H' || lastChar == 'd' || lastChar == 'D')) {
-                if (!messageSplit[1].equals(tempPlayer)) {
-                    punishmentConfirm = false;
-                }
-                if (!punishmentConfirm) {
-                    ChatManager.ClientMessage(Colors.RESET + "Вы " + Colors.RED + "УВЕРЕНЫ" + Colors.RESET
-                            + ", что хотите выдать наказание игроку " + Colors.GOLD + messageSplit[1] + Colors.RESET + "?");
-                    ChatManager.ClientMessage(Colors.RESET + "Если вы " + Colors.RED + "УВЕРЕНЫ" + Colors.RESET
-                            + ", то введите команду " + Colors.GOLD + "ещё раз" + Colors.RESET + ".");
-                    tempPlayer = messageSplit[1];
-                    punishmentConfirm = true;
+                if (nicknameHasChar) {
+                    ChatManager.ClientMessage(Colors.RED + "Некорректный никнейм!");
                     return;
                 }
+                if ((lastChar == 'h' || lastChar == 'H' || lastChar == 'd' || lastChar == 'D')) {
+                    if (!messageSplit[1].equals(tempPlayer)) {
+                        punishmentConfirm = false;
+                    }
+                    if (!punishmentConfirm) {
+                        ChatManager.ClientMessage(Colors.RESET + "Вы " + Colors.RED + "УВЕРЕНЫ" + Colors.RESET
+                                + ", что хотите выдать наказание игроку " + Colors.GOLD + messageSplit[1] + Colors.RESET + "?");
+                        ChatManager.ClientMessage(Colors.RESET + "Если вы " + Colors.RED + "УВЕРЕНЫ" + Colors.RESET
+                                + ", то введите команду " + Colors.GOLD + "ещё раз" + Colors.RESET + ".");
+                        tempPlayer = messageSplit[1];
+                        punishmentConfirm = true;
+                        return;
+                    }
+                }
+                punishmentConfirm = false;
+                tempPlayer = "null";
             }
-            punishmentConfirm = false;
-            tempPlayer = "null";
             if (ChatManager.IsArrayContains(ChatManager.TempPunishments, command)) {
                 messageSplit = message.split(" ", 4);
                 switch (messageSplit.length) {
@@ -108,6 +111,8 @@ public class Punishments {
                     PunishmentsManager.Punish(command, nick, reason, true);
                 }
             }
+
+            HolyModeration.SaveCfg();
         }
     }
 

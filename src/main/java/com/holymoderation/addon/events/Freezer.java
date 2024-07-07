@@ -3,6 +3,7 @@ package com.holymoderation.addon.events;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.holymoderation.addon.HolyModeration;
 import com.holymoderation.addon.utils.PunishmentsManager;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
@@ -128,6 +129,8 @@ public class Freezer {
                     break;
                 }
             }
+
+            HolyModeration.SaveCfg();
         }
     }
 
