@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d6b24e8-412b-424b-ae49-a12f88aaa96f" name="Changes" comment="k.j" />
+    <list default="true" id="1d6b24e8-412b-424b-ae49-a12f88aaa96f" name="Changes" comment="k.j">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/UpdateChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/UpdateChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/HolyModeration.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/HolyModeration.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +72,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -83,32 +96,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build 3.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build LabyCheck.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [assemble].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [buildEnvironment].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [downloadAPI].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [downloadAssets].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [genIntellijRuns].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LabyCheck [runClient].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitProjects/IntelliJ IDEA WorkSpace/HM-Laby3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15039062&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build 3.executor": "Run",
+    "Gradle.Build LabyCheck.executor": "Run",
+    "Gradle.LabyCheck [assemble].executor": "Run",
+    "Gradle.LabyCheck [buildEnvironment].executor": "Run",
+    "Gradle.LabyCheck [build].executor": "Run",
+    "Gradle.LabyCheck [clean].executor": "Run",
+    "Gradle.LabyCheck [downloadAPI].executor": "Run",
+    "Gradle.LabyCheck [downloadAssets].executor": "Run",
+    "Gradle.LabyCheck [genIntellijRuns].executor": "Run",
+    "Gradle.LabyCheck [runClient].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/GitProjects/IntelliJ IDEA WorkSpace/HolyModeration-Laby3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15039062",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitProjects\IntelliJ IDEA WorkSpace\HolyModeration\src\main\java\com" />
@@ -325,6 +338,7 @@
       <workItem from="1720352741421" duration="128000" />
       <workItem from="1720352937140" duration="93000" />
       <workItem from="1720353067321" duration="130000" />
+      <workItem from="1720353210479" duration="372000" />
     </task>
     <servers />
   </component>
