@@ -54,6 +54,8 @@ public class Help {
                     + " - показывает установленный вк");
             ChatManager.ClientMessage(Colors.GOLD + ".dupeip" + Colors.RESET
                     + " - включает/выключает автоматический /dupeip при проверке");
+            ChatManager.ClientMessage(Colors.GOLD + ".autocopy" + Colors.RESET
+                    + " - включает/выключает автоматическое копирование айди AnyDesk от игрока");
             ChatManager.ClientMessage(Colors.GOLD + ".counter" + Colors.RESET + " - включает/выключает отображение счётчика");
             ChatManager.ClientMessage(Colors.GOLD + ".getstats" + Colors.RESET
                     + " - выводит статистику за всё время");

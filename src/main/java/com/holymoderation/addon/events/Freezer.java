@@ -134,6 +134,10 @@ public class Freezer {
         }
     }
 
+    public static String GetPlayer() {
+        return player;
+    }
+
     public static Boolean GetDupeIp() {
         return dupeIpEnabled;
     }

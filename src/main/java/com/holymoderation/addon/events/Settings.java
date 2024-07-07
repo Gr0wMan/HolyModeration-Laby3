@@ -124,6 +124,17 @@ public class Settings {
                         Counter.RemoveCheckOut();
                         ChatManager.ClientMessage(Colors.GREEN + "Вы успешно удалили проверку!");
                         break;
+                    case (".autocopy"):
+                        AutoAnyDesk.SetAutoAnyDeskEnabled(!AutoAnyDesk.GetAutoAnyDeskEnabled());
+                        if (AutoAnyDesk.GetAutoAnyDeskEnabled()) {
+                            ChatManager.ClientMessage(Colors.YELLOW + "Автоматическое копирование айди AnyDesk"
+                                    + Colors.GREEN + " ВКЛЮЧЕНО");
+                        }
+                        else {
+                            ChatManager.ClientMessage(Colors.YELLOW + "Автоматическое копирование айди AnyDesk"
+                                    + Colors.RED + " ВЫКЛЮЧЕНО");
+                        }
+                        break;
                 }
             }
             else if (ChatManager.IsArrayContains(ChatManager.SettingsWithOneArgument, command)) {

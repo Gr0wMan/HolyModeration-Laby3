@@ -16,19 +16,15 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Freezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Freezer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Help.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Punishments.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Punishments.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Settings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/UpdateChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/UpdateChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/ChatManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/ChatManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/HolyModeration.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/HolyModeration.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/version.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Punishments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Punishments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/UpdateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/UpdateChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/ChatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/ChatManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +346,7 @@
       <workItem from="1720352741421" duration="128000" />
       <workItem from="1720352937140" duration="93000" />
       <workItem from="1720353067321" duration="130000" />
-      <workItem from="1720353210479" duration="7846000" />
+      <workItem from="1720353210479" duration="18962000" />
     </task>
     <servers />
   </component>

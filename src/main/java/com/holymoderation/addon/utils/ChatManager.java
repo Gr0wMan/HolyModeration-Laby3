@@ -16,7 +16,7 @@ public class ChatManager {
             "/ban", ".setcountercoords", ".settimercolor", ".setcountercolor",
             ".getstats", ".clearstats", ".clearallstats", ".counter", "/mute",
             "/muteip", "/tempmute", "/tempmuteip", "/banip", "/tempban",
-            ".addreport", ".removereport", ".removecheckout"};
+            ".addreport", ".removereport", ".removecheckout", ".autocopy"};
 
     public static String[] HelpCommands = {".hm", ".help"};
 
@@ -25,10 +25,10 @@ public class ChatManager {
     public static String[] SettingsCommands = {".textlist", ".textclear", ".textadd", ".textremove",
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats", ".counter",
-            ".addreport", ".removereport", ".removecheckout"};
+            ".addreport", ".removereport", ".removecheckout", ".autocopy"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter",
-            ".addreport", ".removereport", ".removecheckout"};
+            ".addreport", ".removereport", ".removecheckout", ".autocopy"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};
     public static String[] SettingsWithTwoArguments = {".textedit", ".settimercoords", ".setcountercoords"};
@@ -56,10 +56,22 @@ public class ChatManager {
         return Arrays.asList(array).contains(value);
     }
 
-    public static boolean CheckCorrectInt(String message) {
-        int value = 0; {
+    public static boolean CheckCorrectInt(String value) {
+        int newValue = 0; {
             try {
-                value = Integer.parseInt(message);
+                newValue = Integer.parseInt(value);
+                return(true);
+            }
+            catch (NumberFormatException e) {
+                return(false);
+            }
+        }
+    }
+
+    public static boolean CheckCorrectLong(String value) {
+        long newValue = 0; {
+            try {
+                newValue = Long.parseLong(value);
                 return(true);
             }
             catch (NumberFormatException e) {

@@ -25,6 +25,7 @@ public class HolyModeration extends LabyModAddon {
     getApi().getEventService().registerListener(new Punishments());
     getApi().getEventService().registerListener(new Counter());
     getApi().getEventService().registerListener(new UpdateChecker());
+    getApi().getEventService().registerListener(new AutoAnyDesk());
   }
 
   @Override
@@ -43,6 +44,8 @@ public class HolyModeration extends LabyModAddon {
     Counter.SetCustomColor(getConfig().has("counter_custom_color") ? getConfig().get("counter_custom_color").getAsInt() : 0x0);
     Counter.SetXCoords(getConfig().has("counterx") ? getConfig().get("counterx").getAsInt() : 0x0);
     Counter.SetYCoords(getConfig().has("countery") ? getConfig().get("countery").getAsInt() : 0x0);
+
+    AutoAnyDesk.SetAutoAnyDeskEnabled(getConfig().has("auto_any_desk_copy") ? getConfig().get("auto_any_desk_copy").getAsBoolean() : false);
 
     int checkouts = (getConfig().has("checkouts") ? getConfig().get("checkouts").getAsInt() : 0);
     int reports = (getConfig().has("reports") ? getConfig().get("reports").getAsInt() : 0);
@@ -95,6 +98,8 @@ public class HolyModeration extends LabyModAddon {
     HolyModeration.this.getConfig().addProperty("tpunishments", Counter.GetTempInfo()[2]);
     HolyModeration.this.getConfig().addProperty("tbans", Counter.GetTempInfo()[3]);
     HolyModeration.this.getConfig().addProperty("tmutes", Counter.GetTempInfo()[4]);
+
+    HolyModeration.this.getConfig().addProperty("auto_any_desk_copy", AutoAnyDesk.GetAutoAnyDeskEnabled());
 
     HolyModeration.this.saveConfig();
 
