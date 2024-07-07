@@ -1,0 +1,10 @@
+{
+  "name": "HolyModeration",
+  "uuid": "%uuid%",
+  "description": "An auxiliary mod for moderation on HW (laby 3) | Bugs? vk.com/gr0wman",
+  "mainClass": "com.holymoderation.addon.HolyModeration",
+  "version": 1.0,
+  "author": "https://github.com/Gr0wMan",
+  "category": 4,
+  "icon:": "https://github.com/Gr0wMan/assets/raw/main/images/HMicon64x64.png"
+}

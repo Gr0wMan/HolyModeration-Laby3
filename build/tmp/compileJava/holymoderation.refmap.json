@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "com/holymoderation/addon/mixin/HolyModerationMixin": {
+      "runTick": "Lnet/minecraft/client/Minecraft;func_71407_l()V"
+    }
+  },
+  "data": {
+    "notch": {
+      "com/holymoderation/addon/mixin/HolyModerationMixin": {
+        "runTick": "Ldjz;q()V"
+      }
+    },
+    "searge": {
+      "com/holymoderation/addon/mixin/HolyModerationMixin": {
+        "runTick": "Lnet/minecraft/client/Minecraft;func_71407_l()V"
+      }
+    }
+  }
+}

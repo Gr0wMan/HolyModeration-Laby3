@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.holymoderation.addon.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "holymoderation.refmap.json",
+  "verbose": false,
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "HolyModerationMixin"
+  ]
+}
