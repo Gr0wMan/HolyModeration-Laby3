@@ -1,11 +1,9 @@
 package com.holymoderation.addon.events;
 
 import com.holymoderation.addon.utils.ChatManager;
-import com.labymedia.connect.api.chat.Chat;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageReceiveEvent;
 
-import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.ClipboardOwner;

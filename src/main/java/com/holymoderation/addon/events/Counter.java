@@ -1,10 +1,8 @@
 package com.holymoderation.addon.events;
 
-import com.holymoderation.addon.utils.ChatManager;
 import com.holymoderation.addon.utils.RenderHelper;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Counter {
 
