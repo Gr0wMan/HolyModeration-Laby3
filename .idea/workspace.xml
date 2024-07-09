@@ -5,14 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d6b24e8-412b-424b-ae49-a12f88aaa96f" name="Changes" comment="k.j">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HMManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/SettingsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/AutoVanish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/AutoAnyDesk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Counter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Freezer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Freezer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Help.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Punishments.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Punishments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Timer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/events/Timer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/ChatManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/Colors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/PunishmentsManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/RenderHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/utils/UpdateChecker.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/HolyModeration.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/HolyModeration.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/AutoAnyDesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/MessageReceive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Punishments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Punishments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/ChatManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/Colors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/PunishmentsManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/RenderHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/utils/UpdateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/UpdateChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +127,11 @@
     &quot;accountId&quot;: &quot;fcf9a23d-4d60-4804-b3c6-7001a4902942&quot;
   }
 }</component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -104,6 +154,7 @@
     "Gradle.LabyCheck [downloadAssets].executor": "Run",
     "Gradle.LabyCheck [genIntellijRuns].executor": "Run",
     "Gradle.LabyCheck [runClient].executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/GitProjects/IntelliJ IDEA WorkSpace/HolyModeration-Laby3",
@@ -114,7 +165,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15039062",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -335,6 +386,8 @@
       <workItem from="1720352937140" duration="93000" />
       <workItem from="1720353067321" duration="130000" />
       <workItem from="1720353210479" duration="22976000" />
+      <workItem from="1720463049335" duration="2577000" />
+      <workItem from="1720477522926" duration="28187000" />
     </task>
     <servers />
   </component>

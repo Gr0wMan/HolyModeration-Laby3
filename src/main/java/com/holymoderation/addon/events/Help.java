@@ -3,8 +3,9 @@ package com.holymoderation.addon.events;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
-import com.holymoderation.addon.utils.Colors;
-import com.holymoderation.addon.utils.ChatManager;
+import static com.holymoderation.addon.HMManager.*;
+
+import static com.holymoderation.addon.Colors.*;
 
 public class Help {
 
@@ -15,86 +16,52 @@ public class Help {
         String message = event.getMessage();
         messageSplit = message.split(" ");
         String command = messageSplit[0];
-        if (ChatManager.IsArrayContains(ChatManager.HelpCommands, command))
+        if (IsArrayContains(HelpCommands, command))
         {
             event.setCancelled(true);
-            ChatManager.ClientMessage(Colors.BLUE + "HM Help:");
-            ChatManager.ClientMessage(Colors.GOLD + ".hm" + Colors.RESET + " или "
-                    + Colors.GOLD + ".help" + Colors.RESET + " - показывает HM Help");
-            ChatManager.ClientMessage("");
-            ChatManager.ClientMessage(Colors.DARK_RED + "ПОМОЩЬ ПО ПРОВЕРКАМ:");
-            ChatManager.ClientMessage(Colors.GOLD + "/freezing" + Colors.GREEN + " player" + Colors.RESET
-                    + " или " + Colors.GOLD + "/frz" + Colors.GREEN + " player" + Colors.RESET
-                    + " - замораживает игрока и начинает проверку");
-            ChatManager.ClientMessage(Colors.GOLD + "/unfreezing" + Colors.RESET
-                    + " или " + Colors.GOLD + "/unfrz" + Colors.RESET
-                    + " - размораживает игрока, который находится на вашей проверке и заканчивает проверку");
-            ChatManager.ClientMessage(Colors.GOLD + "/sban" + Colors.GREEN + " time reason" + Colors.RESET
-                    + " - банит игрока, который сейчас на вашей проверке");
-            ChatManager.ClientMessage(Colors.GOLD + ".freezing" + Colors.GREEN + " player" + Colors.RESET
-                    + " или " + Colors.GOLD + ".frz" + Colors.GREEN + " player" + Colors.RESET
-                    + " - просто замораживает/размораживает игрока, " +
-                    "при условии, что он не находится на вашей проверке");
-            ChatManager.ClientMessage("");
-            ChatManager.ClientMessage(Colors.DARK_RED + "ПОМОЩЬ ПО НАСТРОЙКЕ АДДОНА:");
-            ChatManager.ClientMessage(Colors.GOLD + ".textlist" + Colors.RESET + Colors.RESET
-                    + " - показывает настроенные тексты");
-            ChatManager.ClientMessage(Colors.GOLD + ".textadd" + Colors.GREEN + " text" + Colors.RESET
-                    + " - добавляет новый текст");
-            ChatManager.ClientMessage(Colors.GOLD + ".textremove" + Colors.GREEN + " number" + Colors.RESET
-                    + " - удаляет текст по его номеру");
-            ChatManager.ClientMessage(Colors.GOLD + ".textedit" + Colors.GREEN + " number newtext" + Colors.RESET
-                    + " - изменяет текст на новый");
-            ChatManager.ClientMessage(Colors.GOLD + ".textclear" + Colors.GREEN + " number newtext" + Colors.RESET
-                    + " - очищает тексты");
-            ChatManager.ClientMessage(Colors.GOLD + ".setvk" + Colors.GREEN + " your vk" + Colors.RESET
-                    + " - установливает ссылку на вк (для банов), устанавливайте в формате 'vk.com/id'");
-            ChatManager.ClientMessage(Colors.GOLD + ".getvk" + Colors.RESET
-                    + " - показывает установленный вк");
-            ChatManager.ClientMessage(Colors.GOLD + ".dupeip" + Colors.RESET
-                    + " - включает/выключает автоматический /dupeip при проверке");
-            ChatManager.ClientMessage(Colors.GOLD + ".autocopy" + Colors.RESET
-                    + " - включает/выключает автоматическое копирование айди AnyDesk от игрока");
-            ChatManager.ClientMessage(Colors.GOLD + ".counter" + Colors.RESET + " - включает/выключает отображение счётчика");
-            ChatManager.ClientMessage(Colors.GOLD + ".getstats" + Colors.RESET
-                    + " - выводит статистику за всё время");
-            ChatManager.ClientMessage(Colors.GOLD + ".clearstats" + Colors.RESET
-                    + " - очищает временную информацию счётчика");
-            ChatManager.ClientMessage(Colors.GOLD + ".addreport" + Colors.RESET
-                    + " - добавляет репорт (заменяет обычную проверку в статистике на репорт)");
-            ChatManager.ClientMessage(Colors.GOLD + ".removereport" + Colors.RESET
-                    + " - удаляет репорт (заменяет репорт в статистике на обычную проверку)");
-            ChatManager.ClientMessage(Colors.GOLD + ".removecheckout" + Colors.RESET
-                    + " - удаляет проверку из статистики");
-            ChatManager.ClientMessage(Colors.GOLD + ".settimercoords" + Colors.GREEN + " x y" + Colors.RESET
-                    + " - устанавливает позицию для таймера (считая от левого верхнего угла)");
-            ChatManager.ClientMessage(Colors.GOLD + ".setcountercoords" + Colors.GREEN + " x y" + Colors.RESET
-                    + " - устанавливает позицию для счётчика (считая от левого верхнего угла)");
-            ChatManager.ClientMessage(Colors.GOLD + ".settimercolor" + Colors.GREEN + " colorid" + Colors.RESET
-                    + " - устанавливает свой цвет для таймера");
-            ChatManager.ClientMessage(Colors.GOLD + ".setcountercolor" + Colors.GREEN + " colorid" + Colors.RESET
-                    + " - устанавливает свой цвет для счётчика");
-            ChatManager.ClientMessage("Пример: " + Colors.GREEN + "ff0000" + Colors.RESET + " - красный");
-            ChatManager.ClientMessage("Чтобы вернуть радужный цвет напишите" + Colors.GOLD + " .setcolor"
-                    + Colors.GREEN + " 0");
-            ChatManager.ClientMessage("");
-            ChatManager.ClientMessage(Colors.DARK_RED + "СПИСОК НАКАЗАНИЙ:");
-            ChatManager.ClientMessage(Colors.GOLD + "/mute" + Colors.GREEN + " nick reason" + Colors.RESET
-                    + " - мут навсегда");
-            ChatManager.ClientMessage(Colors.GOLD + "/muteip" + Colors.GREEN + " nick reason" + Colors.RESET
-                    + " - мут по айпи навсегда");
-            ChatManager.ClientMessage(Colors.GOLD + "/tempmute" + Colors.GREEN + " nick time reason" + Colors.RESET
-                    + " - мут на время");
-            ChatManager.ClientMessage(Colors.GOLD + "/tempmuteip" + Colors.GREEN + " nick time reason" + Colors.RESET
-                    + " - мут по айпи на время");
-            ChatManager.ClientMessage(Colors.GOLD + "/ban" + Colors.GREEN + " nick reason" + Colors.RESET
-                    + " - бан навсегда");
-            ChatManager.ClientMessage(Colors.GOLD + "/banip" + Colors.GREEN + " nick reason" + Colors.RESET
-                    + " - бан по айпи на время/навсегда");
-            ChatManager.ClientMessage(Colors.GOLD + "/tempban" + Colors.GREEN + " nick time reason" + Colors.RESET
-                    + " - бан на время");
-            ChatManager.ClientMessage("");
-            ChatManager.ClientMessage(Colors.GREEN + "Ссылки на инструкцию к моду и исходный код можно найти в файле 'README.TXT'");
+            ClientMessage(BLUE + "HM Help:");
+            ClientMessage(GOLD + ".hm" + RESET + " или " + GOLD + ".help" + RESET + " - показывает HM Help");
+            ClientMessage("");
+            ClientMessage(DARK_RED + "ПОМОЩЬ ПО ПРОВЕРКАМ:");
+            ClientMessage(GOLD + "/freezing" + GREEN + " player" + RESET + " или " + GOLD + "/frz" + GREEN + " player" + RESET + " - замораживает игрока и начинает проверку");
+            ClientMessage(GOLD + "/unfreezing" + RESET + " или " + GOLD + "/unfrz" + RESET + " - размораживает игрока, который находится на вашей проверке и заканчивает проверку");
+            ClientMessage(GOLD + "/sban" + GREEN + " time reason" + RESET + " - банит игрока, который сейчас на вашей проверке");
+            ClientMessage(GOLD + ".freezing" + GREEN + " player" + RESET + " или " + GOLD + ".frz" + GREEN + " player" + RESET + " - просто замораживает/размораживает игрока, " + "при условии, что он не находится на вашей проверке");
+            ClientMessage("");
+            ClientMessage(DARK_RED + "ПОМОЩЬ ПО НАСТРОЙКЕ АДДОНА:");
+            ClientMessage(GOLD + ".textlist" + RESET + RESET + " - показывает настроенные тексты");
+            ClientMessage(GOLD + ".textadd" + GREEN + " text" + RESET + " - добавляет новый текст");
+            ClientMessage(GOLD + ".textremove" + GREEN + " number" + RESET + " - удаляет текст по его номеру");
+            ClientMessage(GOLD + ".textedit" + GREEN + " number newtext" + RESET + " - изменяет текст на новый");
+            ClientMessage(GOLD + ".textclear" + GREEN + " number newtext" + RESET + " - очищает тексты");
+            ClientMessage(GOLD + ".setvk" + GREEN + " your vk" + RESET + " - установливает ссылку на вк (для банов), устанавливайте в формате 'vk.com/id'");
+            ClientMessage(GOLD + ".getvk" + RESET + " - показывает установленный вк");
+            ClientMessage(GOLD + ".dupeip" + RESET + " - включает/выключает автоматический /dupeip при проверке");
+            ClientMessage(GOLD + ".autocopy" + RESET + " - включает/выключает автоматическое копирование айди AnyDesk от игрока");
+            ClientMessage(GOLD + ".counter" + RESET + " - включает/выключает отображение счётчика");
+            ClientMessage(GOLD + ".getstats" + RESET + " - выводит статистику за всё время");
+            ClientMessage(GOLD + ".clearstats" + RESET + " - очищает временную информацию счётчика");
+            ClientMessage(GOLD + ".addreport" + RESET + " - добавляет репорт (заменяет обычную проверку в статистике на репорт)");
+            ClientMessage(GOLD + ".removereport" + RESET + " - удаляет репорт (заменяет репорт в статистике на обычную проверку)");
+            ClientMessage(GOLD + ".addcheckout" + RESET + " - добавялет проверку");
+            ClientMessage(GOLD + ".removecheckout" + RESET + " - удаляет проверку из статистики");
+            ClientMessage(GOLD + ".settimercoords" + GREEN + " x y" + RESET + " - устанавливает позицию для таймера (считая от левого верхнего угла)");
+            ClientMessage(GOLD + ".setcountercoords" + GREEN + " x y" + RESET + " - устанавливает позицию для счётчика (считая от левого верхнего угла)");
+            ClientMessage(GOLD + ".settimercolor" + GREEN + " colorid" + RESET + " - устанавливает свой цвет для таймера");
+            ClientMessage(GOLD + ".setcountercolor" + GREEN + " colorid" + RESET + " - устанавливает свой цвет для счётчика");
+            ClientMessage("Пример: " + GREEN + "ff0000" + RESET + " - красный");
+            ClientMessage("Чтобы вернуть радужный цвет напишите" + GOLD + " .setcolor" + GREEN + " 0");
+            ClientMessage("");
+            ClientMessage(DARK_RED + "СПИСОК НАКАЗАНИЙ:");
+            ClientMessage(GOLD + "/mute" + GREEN + " nick reason" + RESET + " - мут навсегда");
+            ClientMessage(GOLD + "/muteip" + GREEN + " nick reason" + RESET + " - мут по айпи навсегда");
+            ClientMessage(GOLD + "/tempmute" + GREEN + " nick time reason" + RESET + " - мут на время");
+            ClientMessage(GOLD + "/tempmuteip" + GREEN + " nick time reason" + RESET + " - мут по айпи на время");
+            ClientMessage(GOLD + "/ban" + GREEN + " nick reason" + RESET + " - бан навсегда");
+            ClientMessage(GOLD + "/banip" + GREEN + " nick reason" + RESET + " - бан по айпи на время/навсегда");
+            ClientMessage(GOLD + "/tempban" + GREEN + " nick time reason" + RESET + " - бан на время");
+            ClientMessage("");
+            ClientMessage(GREEN + "Ссылки на инструкцию к моду и исходный код можно найти в файле 'README.TXT'");
         }
     }
 }

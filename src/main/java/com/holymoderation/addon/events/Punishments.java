@@ -1,17 +1,17 @@
 package com.holymoderation.addon.events;
 
-import com.holymoderation.addon.HolyModeration;
+import static com.holymoderation.addon.HolyModeration.SaveCfg;
+
+import static com.holymoderation.addon.HMManager.*;
+
+import static com.holymoderation.addon.SettingsManager.*;
+
+import static com.holymoderation.addon.Colors.*;
+
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
-import com.holymoderation.addon.utils.ChatManager;
-import com.holymoderation.addon.utils.Colors;
-import com.holymoderation.addon.utils.PunishmentsManager;
-
 public class Punishments {
-
-    private static String player = null;
-    private static String[] messageSplit;
 
     private static boolean nicknameHasChar = false;
     private static boolean punishmentConfirm = false;
@@ -22,19 +22,19 @@ public class Punishments {
         String message = event.getMessage();
         String command = message.split(" ", 0)[0];
 
-        if (ChatManager.IsArrayContains(ChatManager.PunishmentsCommands, command)) {
+        if (IsArrayContains(PunishmentsCommands, command)) {
             event.setCancelled(true);
-            messageSplit = message.split(" ", 3);
+            String[] messageSplit = message.split(" ", 3);
             if (messageSplit.length > 1) {
                 char lastChar = messageSplit[1].charAt(messageSplit[1].length() - 1);
-                for (int i = 0; i < ChatManager.Chars.length; i++) {
-                    if (messageSplit[1].contains(ChatManager.Chars[i])) {
+                for (String c : Chars) {
+                    if (messageSplit[1].contains(c)) {
                         nicknameHasChar = true;
                         break;
                     }
                 }
                 if (nicknameHasChar) {
-                    ChatManager.ClientMessage(Colors.RED + "Некорректный никнейм!");
+                    ClientMessage(RED + "Некорректный никнейм!");
                     return;
                 }
                 if ((lastChar == 'h' || lastChar == 'H' || lastChar == 'd' || lastChar == 'D')) {
@@ -42,10 +42,10 @@ public class Punishments {
                         punishmentConfirm = false;
                     }
                     if (!punishmentConfirm) {
-                        ChatManager.ClientMessage(Colors.RESET + "Вы " + Colors.RED + "УВЕРЕНЫ" + Colors.RESET
-                                + ", что хотите выдать наказание игроку " + Colors.GOLD + messageSplit[1] + Colors.RESET + "?");
-                        ChatManager.ClientMessage(Colors.RESET + "Если вы " + Colors.RED + "УВЕРЕНЫ" + Colors.RESET
-                                + ", то введите команду " + Colors.GOLD + "ещё раз" + Colors.RESET + ".");
+                        ClientMessage(RESET + "Вы " + RED + "УВЕРЕНЫ" + RESET
+                                + ", что хотите выдать наказание игроку " + GOLD + messageSplit[1] + RESET + "?");
+                        ClientMessage(RESET + "Если вы " + RED + "УВЕРЕНЫ" + RESET
+                                + ", то введите команду " + GOLD + "ещё раз" + RESET + ".");
                         tempPlayer = messageSplit[1];
                         punishmentConfirm = true;
                         return;
@@ -54,69 +54,65 @@ public class Punishments {
                 punishmentConfirm = false;
                 tempPlayer = "null";
             }
-            if (ChatManager.IsArrayContains(ChatManager.TempPunishments, command)) {
+            if (IsArrayContains(TempPunishments, command)) {
                 messageSplit = message.split(" ", 4);
                 switch (messageSplit.length) {
                     case (1):
-                        ChatManager.ClientMessage(Colors.RED + "Вы не указали ник игрока, время и причину!");
+                        ClientMessage(RED + "Вы не указали ник игрока, время и причину!");
                         return;
                     case (2):
-                        ChatManager.ClientMessage(Colors.RED + "Вы не указали время и причину!");
+                        ClientMessage(RED + "Вы не указали время и причину!");
                         return;
                     case (3):
-                        ChatManager.ClientMessage(Colors.RED + "Вы не указали причину!");
+                        ClientMessage(RED + "Вы не указали причину!");
                         return;
                 }
                 String nick = messageSplit[1];
                 String time = messageSplit[2];
                 String reason = messageSplit[3];
-                if (PunishmentsManager.CheckPlayerOnCheck(player, nick)) {
+                if (Player.equals(nick)) {
+                    //ПОДТВЕРЖДЕНИЕ
+                }
+                if (!CheckTimeFormat(time)) {
                     return;
                 }
-                if (!PunishmentsManager.CheckTimeFormat(time)) {
-                    return;
+                if (IsArrayContains(MuteCommands, command)) {
+                    Punish(command, nick, time, reason, false);
                 }
-                if (ChatManager.IsArrayContains(ChatManager.MuteCommands, command)) {
-                    PunishmentsManager.Punish(command, nick, time, reason, false);
-                }
-                if (ChatManager.IsArrayContains(ChatManager.BanCommands, command)) {
-                    if (!PunishmentsManager.CheckVK()) {
+                if (IsArrayContains(BanCommands, command)) {
+                    if (!CheckVK()) {
                         return;
                     }
-                    PunishmentsManager.Punish(command, nick, time, reason, true);
+                    Punish(command, nick, time, reason, true);
                 }
             }
-            else if (ChatManager.IsArrayContains(ChatManager.InfinityPunishments, command)) {
+            else if (IsArrayContains(InfinityPunishments, command)) {
                 messageSplit = message.split(" ", 3);
                 switch (messageSplit.length) {
                     case (1):
-                        ChatManager.ClientMessage(Colors.RED + "Вы не указали ник игрока и причину!");
+                        ClientMessage(RED + "Вы не указали ник игрока и причину!");
                         return;
                     case (2):
-                        ChatManager.ClientMessage(Colors.RED + "Вы не указали причину!");
+                        ClientMessage(RED + "Вы не указали причину!");
                         return;
                 }
                 String nick = messageSplit[1];
                 String reason = messageSplit[2];
-                if (PunishmentsManager.CheckPlayerOnCheck(player, nick)) {
-                    return;
+                if (Player.equals(nick)) {
+                    //ПОДТВЕРЖДЕНИЕ
                 }
-                if (ChatManager.IsArrayContains(ChatManager.MuteCommands, command)) {
-                    PunishmentsManager.Punish(command, nick, reason, false);
+                if (IsArrayContains(MuteCommands, command)) {
+                    Punish(command, nick, reason, false);
                 }
-                if (ChatManager.IsArrayContains(ChatManager.BanCommands, command)) {
-                    if (!PunishmentsManager.CheckVK()) {
+                if (IsArrayContains(BanCommands, command)) {
+                    if (!CheckVK()) {
                         return;
                     }
-                    PunishmentsManager.Punish(command, nick, reason, true);
+                    Punish(command, nick, reason, true);
                 }
             }
 
-            HolyModeration.SaveCfg();
+            SaveCfg();
         }
-    }
-
-    public static void SetPlayer(String value) {
-        player = value;
     }
 }
