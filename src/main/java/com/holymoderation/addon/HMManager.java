@@ -16,9 +16,9 @@ public class HMManager {
             "/freezing", "/frz", "/unfreezing", "/unfrz", ".freezing",
             ".frz", ".textlist", ".textclear", ".textadd", ".textremove",
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords",
-            "/ban", ".setcountercoords", ".settimercolor", ".setcountercolor",
-            ".getstats", ".clearstats", ".clearallstats", ".counter", "/mute",
-            "/muteip", "/tempmute", "/tempmuteip", "/banip", "/tempban",
+            ".setcountercoords", ".settimercolor", ".setcountercolor", ".getstats",
+            ".clearstats", ".clearallstats", ".counter", ".timer", "/mute",
+            "/muteip", "/tempmute", "/tempmuteip", "/ban", "/banip", "/tempban",
             ".addreport", ".removereport", ".removecheckout", ".autocopy",
             ".autoban", ".autovanish"};
 
@@ -29,10 +29,10 @@ public class HMManager {
     public static String[] SettingsCommands = {".textlist", ".textclear", ".textadd", ".textremove",
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
-            ".counter", ".addreport", ".removereport", ".removecheckout", ".autocopy",
-            ".autoban", ".autovanish"};
+            ".counter", ".timer", ".addreport", ".removereport", ".removecheckout",
+            ".autocopy", ".autoban", ".autovanish"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
-            ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter",
+            ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
             ".addreport", ".removereport", ".removecheckout", ".autocopy", ".autovanish", ".autoban"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};

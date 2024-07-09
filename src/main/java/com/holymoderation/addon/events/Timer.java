@@ -18,15 +18,17 @@ public class Timer {
     @Subscribe
     public void OnRender(RenderGameOverlayEvent event) {
         if (Player != null) {
-            if (stopWatch == null) {
-                stopWatch = new StopWatch();
-                stopWatch.start();
+            if (TimerEnabled) {
+                if (stopWatch == null) {
+                    stopWatch = new StopWatch();
+                    stopWatch.start();
+                }
+                DrawString(event, "Текущая проверка:", TXCoords, TYCoords,
+                        TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
+                DrawString(event, Player + " | " + stopWatch.getTime(TimeUnit.MINUTES) + ":"
+                                + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES)*60),
+                        TXCoords, (TYCoords + 10), TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
             }
-            DrawString(event, "Текущая проверка:", TXCoords, TYCoords,
-                    TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
-            DrawString(event, Player + " | " + stopWatch.getTime(TimeUnit.MINUTES) + ":"
-                    + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES)*60),
-                    TXCoords, (TYCoords + 10), TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
         }
         else {
             stopWatch = null;
