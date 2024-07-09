@@ -17,7 +17,7 @@ public class Timer {
 
     @Subscribe
     public void OnRender(RenderGameOverlayEvent event) {
-        if (Player != null) {
+        if (Player != null && TimerEnabled) {
             if (stopWatch == null) {
                 stopWatch = new StopWatch();
                 stopWatch.start();
