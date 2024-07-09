@@ -10,17 +10,28 @@ import static com.holymoderation.addon.Colors.*;
 
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
+import net.minecraft.client.world.DimensionRenderInfo;
 
 public class Punishments {
 
     private static boolean nicknameHasChar = false;
-    private static boolean punishmentConfirm = false;
-    private static String tempPlayer = "null";
+    private static boolean StrangePunishmentConfirm = false;
+    private static boolean StrangeFrzPunishmentConfirm = false;
+    private static String StrangeMessage = "null";
+    private static String StrangeFrzMessage = "null";
 
     @Subscribe
     public void OnUpdate(MessageSendEvent event) {
         String message = event.getMessage();
         String command = message.split(" ", 0)[0];
+
+        if (!message.equals(StrangeMessage)) {
+            StrangePunishmentConfirm = false;
+        }
+
+        if (!message.equals(StrangeFrzMessage)) {
+            StrangeFrzPunishmentConfirm = false;
+        }
 
         if (IsArrayContains(PunishmentsCommands, command)) {
             event.setCancelled(true);
@@ -37,22 +48,36 @@ public class Punishments {
                     ClientMessage(RED + "Некорректный никнейм!");
                     return;
                 }
-                if ((lastChar == 'h' || lastChar == 'H' || lastChar == 'd' || lastChar == 'D')) {
-                    if (!messageSplit[1].equals(tempPlayer)) {
-                        punishmentConfirm = false;
-                    }
-                    if (!punishmentConfirm) {
+                if ((lastChar == 'h' || lastChar == 'H' || lastChar == 'd' || lastChar == 'D')
+                        && CheckCorrectInt(messageSplit[1].substring(0, messageSplit[1].length()-1))) {
+                    if (!StrangePunishmentConfirm) {
                         ClientMessage(RESET + "Вы " + RED + "УВЕРЕНЫ" + RESET
                                 + ", что хотите выдать наказание игроку " + GOLD + messageSplit[1] + RESET + "?");
                         ClientMessage(RESET + "Если вы " + RED + "УВЕРЕНЫ" + RESET
                                 + ", то введите команду " + GOLD + "ещё раз" + RESET + ".");
-                        tempPlayer = messageSplit[1];
-                        punishmentConfirm = true;
+                        StrangeMessage = message;
+                        StrangePunishmentConfirm = true;
                         return;
                     }
+                    else {
+                        StrangePunishmentConfirm = false;
+                        StrangeMessage = "null";
+                    }
                 }
-                punishmentConfirm = false;
-                tempPlayer = "null";
+                if (Player != null && messageSplit[1].equals(Player)) {
+                    if (!StrangeFrzPunishmentConfirm) {
+                        ClientMessage(RESET + "Вы " + RED + "УВЕРЕНЫ" + RESET
+                                + ", что хотите выдать наказание игроку, который у вас на проверке?");
+                        ClientMessage(RESET + "Если вы " + RED + "УВЕРЕНЫ" + RESET
+                                + ", то введите команду " + GOLD + "ещё раз" + RESET + ".");
+                        StrangeFrzMessage = message;
+                        StrangeFrzPunishmentConfirm = true;
+                        return;
+                    }
+                    else {
+                        StrangeFrzMessage = "null";
+                    }
+                }
             }
             if (IsArrayContains(TempPunishments, command)) {
                 messageSplit = message.split(" ", 4);
@@ -70,9 +95,6 @@ public class Punishments {
                 String nick = messageSplit[1];
                 String time = messageSplit[2];
                 String reason = messageSplit[3];
-                if (Player.equals(nick)) {
-                    //ПОДТВЕРЖДЕНИЕ
-                }
                 if (!CheckTimeFormat(time)) {
                     return;
                 }
@@ -98,9 +120,6 @@ public class Punishments {
                 }
                 String nick = messageSplit[1];
                 String reason = messageSplit[2];
-                if (Player.equals(nick)) {
-                    //ПОДТВЕРЖДЕНИЕ
-                }
                 if (IsArrayContains(MuteCommands, command)) {
                     Punish(command, nick, reason, false);
                 }
@@ -109,6 +128,19 @@ public class Punishments {
                         return;
                     }
                     Punish(command, nick, reason, true);
+                }
+            }
+
+            if (IsArrayContains(BanCommands, command)) {
+                if (StrangeFrzPunishmentConfirm && StrangeFrzMessage.equals("null")) {
+                    StrangeFrzPunishmentConfirm = false;
+                    EndCheckOut();
+                }
+            }
+
+            if (IsArrayContains(MuteCommands, command)) {
+                if (StrangeFrzPunishmentConfirm && StrangeFrzMessage.equals("null")) {
+                    StrangeFrzPunishmentConfirm = false;
                 }
             }
 

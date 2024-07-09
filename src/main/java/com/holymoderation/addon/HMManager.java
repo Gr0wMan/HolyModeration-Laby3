@@ -20,7 +20,7 @@ public class HMManager {
             ".clearstats", ".clearallstats", ".counter", ".timer", "/mute",
             "/muteip", "/tempmute", "/tempmuteip", "/ban", "/banip", "/tempban",
             ".addreport", ".removereport", ".removecheckout", ".autocopy",
-            ".autoban", ".autovanish"};
+            ".autoban", ".vanish", ".addcheckout"};
 
     public static String[] HelpCommands = {".hm", ".help"};
 
@@ -30,10 +30,10 @@ public class HMManager {
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
             ".counter", ".timer", ".addreport", ".removereport", ".removecheckout",
-            ".autocopy", ".autoban", ".autovanish"};
+            ".autocopy", ".autoban", ".vanish", ".addcheckout"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
-            ".addreport", ".removereport", ".removecheckout", ".autocopy", ".autovanish", ".autoban"};
+            ".addreport", ".removereport", ".removecheckout", ".autocopy", ".vanish", ".autoban", ".addcheckout"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};
     public static String[] SettingsWithTwoArguments = {".textedit", ".settimercoords", ".setcountercoords"};
@@ -111,7 +111,7 @@ public class HMManager {
     public static boolean CheckTimeFormat(String message) {
         char lastChar = message.charAt(message.length() - 1);
         String stringTime = message.substring(0, message.length() - 1);
-        if (lastChar != 'h' && lastChar != 'H' && lastChar != 'd' && lastChar != 'D' || message.length() > 4 || CheckCorrectInt(stringTime)) {
+        if (lastChar != 'h' && lastChar != 'H' && lastChar != 'd' && lastChar != 'D' || message.length() > 4 || !CheckCorrectInt(stringTime)) {
             ClientMessage(Colors.RED + "Неверный формат времени! Должно быть 1-999h/H или 1-999d/D");
             return false;
         }

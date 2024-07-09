@@ -24,11 +24,11 @@ public class Settings {
         String message = event.getMessage();
         String command = message.split(" ")[0];
 
-        if (IsArrayContains(AllCommands, command) && !command.equals(".clearstats")) {
+        if (!command.equals(".clearstats")) {
             clearStatsMessage = false;
         }
 
-        if (IsArrayContains(AllCommands, command) && !command.equals(".clearallstats")) {
+        if (!command.equals(".clearallstats")) {
             clearAllStatsMessage = false;
         }
 
@@ -154,7 +154,7 @@ public class Settings {
                             ClientMessage(YELLOW + "Автоматический бан при ливе с проверки" + GREEN + " ВЫКЛЮЧЕН");
                         }
                         break;
-                    case (".autovanish"):
+                    case (".vanish"):
                         AutoVanishEnabled = !AutoVanishEnabled;
                         if (AutoVanishEnabled) {
                             ClientMessage(YELLOW + "Автоматический ваниш при заходе на анку" + GREEN + " ВКЛЮЧЁН");
