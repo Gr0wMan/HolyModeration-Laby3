@@ -52,7 +52,7 @@ public class HolyModeration extends LabyModAddon {
 
     TCheckouts = getConfig().has("tcheckouts") ? getConfig().get("tcheckouts").getAsInt() : 0;
     TReports = getConfig().has("treports") ? getConfig().get("treports").getAsInt() : 0;
-    TNotReports = getConfig().has("tnotreports") ? getConfig().get("notreports").getAsInt() : 0;
+    TNotReports = getConfig().has("tnotreports") ? getConfig().get("tnotreports").getAsInt() : 0;
     TPunishments = getConfig().has("tpunishments") ? getConfig().get("tpunishments").getAsInt() : 0;
     TBans = getConfig().has("tbans") ? getConfig().get("tbans").getAsInt() : 0;
     TMutes = getConfig().has("tmutes") ? getConfig().get("tmutes").getAsInt() : 0;

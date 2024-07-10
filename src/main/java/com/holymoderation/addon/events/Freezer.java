@@ -52,7 +52,7 @@ public class Freezer {
                     }
                     if (Texts == null) {
                         ClientMessage(RED + "У вас нет настроенных текстов для отправки! " +
-                                "Добавить тексты --> " + GOLD + ".addtext");
+                                "Добавить тексты --> " + GOLD + ".textadd");
                         ClientMessage(RED + "Просмотреть тексты --> " + GOLD + ".textlist");
                     }
                     else {

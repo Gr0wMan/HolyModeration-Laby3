@@ -60,10 +60,6 @@ public class MessageReceive {
         }
     }
 
-    @Subscribe
-    public void GetMessage(MessageReceiveEvent event) {
-    }
-
     public static void CopyToClipboard(String text) {
         StringSelection strsel = new StringSelection(text);
         Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();

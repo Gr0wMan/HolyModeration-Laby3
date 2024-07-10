@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d6b24e8-412b-424b-ae49-a12f88aaa96f" name="Changes" comment="k.j">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/HolyModeration.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/HolyModeration.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HMManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HMManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/MessageReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/MessageReceive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Settings.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d6b24e8-412b-424b-ae49-a12f88aaa96f" name="Changes" comment="k.j" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +103,7 @@
     "Gradle.Upgrade Gradle wrapper.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitProjects/IntelliJ IDEA WorkSpace/labymod3-server-api-main",
+    "last_opened_file_path": "D:/GitProjects/IntelliJ IDEA WorkSpace/HolyModeration-Laby3/src/main/java",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -134,6 +116,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitProjects\IntelliJ IDEA WorkSpace\HolyModeration-Laby3\src\main\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitProjects\IntelliJ IDEA WorkSpace\HolyModeration\src\main\java\com" />
     </key>
@@ -353,7 +338,7 @@
       <workItem from="1720463049335" duration="2577000" />
       <workItem from="1720477522926" duration="44088000" />
       <workItem from="1720602144410" duration="161000" />
-      <workItem from="1720621574956" duration="4107000" />
+      <workItem from="1720621574956" duration="16278000" />
     </task>
     <servers />
   </component>
