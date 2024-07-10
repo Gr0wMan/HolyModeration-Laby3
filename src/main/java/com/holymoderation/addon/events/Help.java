@@ -59,10 +59,10 @@ public class Help {
             ClientMessage(GOLD + ".getstats" + RESET + " - выводит статистику за всё время");
             ClientMessage(GOLD + ".clearstats" + RESET + " - очищает временную информацию счётчика (отображаемую)");
             ClientMessage(GOLD + ".clearallstats" + RESET + " - очищает информацию счётчика за всё время");
-            ClientMessage(GOLD + ".addcheckout" + RESET + " - добавялет проверку");
-            ClientMessage(GOLD + ".removecheckout" + RESET + " - удаляет проверку");
             ClientMessage(GOLD + ".addreport" + RESET + " - добавляет репорт");
             ClientMessage(GOLD + ".removereport" + RESET + " - удаляет репорт");
+            ClientMessage(GOLD + ".addnotreport" + RESET + " - добавялет простую проверку");
+            ClientMessage(GOLD + ".removenotreport" + RESET + " - удаляет простую проверку");
             ClientMessage("");
             ClientMessage(RED + "ГАЙД ПО ЦВЕТАМ:");
             ClientMessage("Пример: " + GREEN + "ff0000" + RESET + " - красный");

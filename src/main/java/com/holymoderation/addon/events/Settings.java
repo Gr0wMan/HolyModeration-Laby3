@@ -96,7 +96,7 @@ public class Settings {
                         break;
                     case (".clearstats"):
                         if (clearStatsMessage) {
-                            TCheckouts = TReports = TPunishments = TBans = TMutes = 0;
+                            TCheckouts = TReports = TNotReports = TPunishments = TBans = TMutes = 0;
                             ClientMessage(GREEN + "Вы успешно очистили вашу статистику!");
                         }
                         else {
@@ -107,7 +107,7 @@ public class Settings {
                         break;
                     case (".clearallstats"):
                         if (clearAllStatsMessage) {
-                            Checkouts = Reports = Punishments = Bans = Mutes = 0;
+                            Checkouts = Reports = NotReports = Punishments = Bans = Mutes = 0;
                             ClientMessage(GREEN + "Вы успешно очистили " + RED + "ВСЮ" + GREEN + " вашу статистику!");
                         }
                         else {
@@ -117,24 +117,32 @@ public class Settings {
                         clearAllStatsMessage = !clearAllStatsMessage;
                         break;
                     case (".addreport"):
+                        Checkouts += 1;
+                        TCheckouts += 1;
                         Reports += 1;
                         TReports += 1;
                         ClientMessage(GREEN + "Вы успешно добавили репорт!");
                         break;
                     case (".removereport"):
+                        Checkouts -= 1;
+                        TCheckouts -= 1;
                         Reports -= 1;
                         TReports -= 1;
                         ClientMessage(GREEN + "Вы успешно удалили репорт!");
                         break;
-                    case (".addcheckout"):
+                    case (".addnotreport"):
                         Checkouts += 1;
                         TCheckouts += 1;
-                        ClientMessage(GREEN + "Вы успешно добавили проверку!");
+                        NotReports += 1;
+                        TNotReports += 1;
+                        ClientMessage(GREEN + "Вы успешно добавили простую проверку!");
                         break;
-                    case (".removecheckout"):
+                    case (".removenotreport"):
                         Checkouts -= 1;
                         TCheckouts -= 1;
-                        ClientMessage(GREEN + "Вы успешно удалили проверку!");
+                        NotReports -= 1;
+                        TNotReports -= 1;
+                        ClientMessage(GREEN + "Вы успешно удалили простую проверку!");
                         break;
                     case (".autocopy"):
                         AutoAnyDeskEnabled = !AutoAnyDeskEnabled;
@@ -151,7 +159,7 @@ public class Settings {
                             ClientMessage(YELLOW + "Автоматический бан при ливе с проверки" + GREEN + " ВКЛЮЧЁН");
                         }
                         else {
-                            ClientMessage(YELLOW + "Автоматический бан при ливе с проверки" + GREEN + " ВЫКЛЮЧЕН");
+                            ClientMessage(YELLOW + "Автоматический бан при ливе с проверки" + RED + " ВЫКЛЮЧЕН");
                         }
                         break;
                     case (".vanish"):

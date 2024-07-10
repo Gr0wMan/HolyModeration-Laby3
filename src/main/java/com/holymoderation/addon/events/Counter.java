@@ -24,7 +24,7 @@ public class Counter {
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
         DrawString(event,"Репортов: " + TReports, CXCoords, CYCoords + 10*4,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
-        DrawString(event,"Обычных проверок: " + (TCheckouts - TReports), CXCoords + 78, CYCoords + 10*4,
+        DrawString(event,"Обычных проверок: " + TNotReports, CXCoords + 78, CYCoords + 10*4,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
     }
 }

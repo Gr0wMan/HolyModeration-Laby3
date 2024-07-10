@@ -39,6 +39,9 @@ public class Freezer {
                     if (Player.split(" ")[Player.split(" ").length - 1].equals("-r")) {
                         IncreaseInfo("reports");
                     }
+                    else {
+                        IncreaseInfo("notreports");
+                    }
                     Player = Player.split(" ")[0];
                     IncreaseInfo("checkouts");
                     if (DupeIpEnabled) {

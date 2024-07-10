@@ -19,11 +19,11 @@ public class HMManager {
     public static String[] SettingsCommands = {".textlist", ".textclear", ".textadd", ".textremove",
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
-            ".counter", ".timer", ".addreport", ".removereport", ".removecheckout",
-            ".autocopy", ".autoban", ".vanish", ".addcheckout"};
+            ".counter", ".timer", ".addreport", ".removereport", ".autocopy",
+            ".autoban", ".vanish", ".addnotreport", ".removenotreport"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
-            ".addreport", ".removereport", ".removecheckout", ".autocopy", ".vanish", ".autoban", ".addcheckout"};
+            ".addreport", ".removereport", ".autocopy", ".vanish", ".autoban", ".addnotreport", ".removenotreport"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};
     public static String[] SettingsWithTwoArguments = {".textedit", ".settimercoords", ".setcountercoords"};
@@ -155,6 +155,10 @@ public class HMManager {
             case ("reports"):
                 Reports++;
                 TReports++;
+                break;
+            case ("notreports"):
+                NotReports++;
+                TNotReports++;
                 break;
             case ("punishments"):
                 Punishments++;

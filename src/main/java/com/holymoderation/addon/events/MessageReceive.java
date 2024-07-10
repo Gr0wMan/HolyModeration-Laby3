@@ -44,7 +44,7 @@ public class MessageReceive {
 
     @Subscribe
     public void AutoBan(MessageReceiveEvent event) {
-        if (AutoBanEnabled) {
+        if (Player != null && AutoBanEnabled) {
             String receveivedText = event.getComponent().getString();
 
             if (receveivedText.startsWith("▶ Замороженный игрок " + Player)) {
@@ -58,6 +58,10 @@ public class MessageReceive {
                 Punish("/banip", tempPlayer, "30d", "2.4 (Лив с проверки)", true);
             }
         }
+    }
+
+    @Subscribe
+    public void GetMessage(MessageReceiveEvent event) {
     }
 
     public static void CopyToClipboard(String text) {

@@ -8,10 +8,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LabyCheckAddon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LabyCheckAddon.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addon-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/addon-example.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addon-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/addon-example.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labymod3-server-api-main/proxy/bungeecord/bungeecord.iml" filepath="$PROJECT_DIR$/../labymod3-server-api-main/proxy/bungeecord/bungeecord.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.addon-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.addon-example.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.addon-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.addon-example.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.holymoderation.LabyCheckAddon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.holymoderation.LabyCheckAddon.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.holymoderation.LabyCheckAddon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.holymoderation.LabyCheckAddon.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labymod3-server-api-main/labymod-api/labymod-api.iml" filepath="$PROJECT_DIR$/../labymod3-server-api-main/labymod-api/labymod-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labymod3-server-api-main/labymod-common/labymod-common.iml" filepath="$PROJECT_DIR$/../labymod3-server-api-main/labymod-common/labymod-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labymod3-server-api-main/server/server.iml" filepath="$PROJECT_DIR$/../labymod3-server-api-main/server/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labymod3-server-api-main/proxy/velocity/velocity.iml" filepath="$PROJECT_DIR$/../labymod3-server-api-main/proxy/velocity/velocity.iml" />
     </modules>
   </component>
 </project>
