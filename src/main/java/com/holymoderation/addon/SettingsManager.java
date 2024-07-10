@@ -23,6 +23,7 @@ public class SettingsManager {
     //all time
     public static int Checkouts = 0;
     public static int Reports = 0;
+    public static int NotReports = 0;
     public static int Punishments = 0;
     public static int Bans = 0;
     public static int Mutes = 0;
@@ -31,6 +32,7 @@ public class SettingsManager {
     //temp
     public static int TCheckouts = 0;
     public static int TReports = 0;
+    public static int TNotReports = 0;
     public static int TPunishments = 0;
     public static int TBans = 0;
     public static int TMutes = 0;

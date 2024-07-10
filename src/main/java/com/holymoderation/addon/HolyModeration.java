@@ -45,12 +45,14 @@ public class HolyModeration extends LabyModAddon {
 
     Checkouts = getConfig().has("checkouts") ? getConfig().get("checkouts").getAsInt() : 0;
     Reports = getConfig().has("reports") ? getConfig().get("reports").getAsInt() : 0;
+    NotReports = getConfig().has("notreports") ? getConfig().get("notreports").getAsInt() : 0;
     Punishments = getConfig().has("punishments") ? getConfig().get("punishments").getAsInt() : 0;
     Bans = getConfig().has("bans") ? getConfig().get("bans").getAsInt() : 0;
     Mutes = getConfig().has("mutes") ? getConfig().get("mutes").getAsInt() : 0;
 
     TCheckouts = getConfig().has("tcheckouts") ? getConfig().get("tcheckouts").getAsInt() : 0;
     TReports = getConfig().has("treports") ? getConfig().get("treports").getAsInt() : 0;
+    TNotReports = getConfig().has("tnotreports") ? getConfig().get("notreports").getAsInt() : 0;
     TPunishments = getConfig().has("tpunishments") ? getConfig().get("tpunishments").getAsInt() : 0;
     TBans = getConfig().has("tbans") ? getConfig().get("tbans").getAsInt() : 0;
     TMutes = getConfig().has("tmutes") ? getConfig().get("tmutes").getAsInt() : 0;
@@ -86,12 +88,14 @@ public class HolyModeration extends LabyModAddon {
 
     HolyModeration.this.getConfig().addProperty("checkouts", Checkouts);
     HolyModeration.this.getConfig().addProperty("reports", Reports);
+    HolyModeration.this.getConfig().addProperty("notreports", NotReports);
     HolyModeration.this.getConfig().addProperty("punishments", Punishments);
     HolyModeration.this.getConfig().addProperty("bans", Bans);
     HolyModeration.this.getConfig().addProperty("mutes", Mutes);
 
     HolyModeration.this.getConfig().addProperty("tcheckouts", TCheckouts);
     HolyModeration.this.getConfig().addProperty("treports", TReports);
+    HolyModeration.this.getConfig().addProperty("tnotreports", TNotReports);
     HolyModeration.this.getConfig().addProperty("tpunishments", TPunishments);
     HolyModeration.this.getConfig().addProperty("tbans", TBans);
     HolyModeration.this.getConfig().addProperty("tmutes", TMutes);

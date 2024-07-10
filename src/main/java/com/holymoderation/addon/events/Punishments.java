@@ -10,7 +10,6 @@ import static com.holymoderation.addon.Colors.*;
 
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
-import net.minecraft.client.world.DimensionRenderInfo;
 
 public class Punishments {
 

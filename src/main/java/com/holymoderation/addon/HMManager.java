@@ -12,16 +12,6 @@ import java.util.Arrays;
 
 public class HMManager {
 
-    public static String[] AllCommands = {".hm", ".help", "/sban",
-            "/freezing", "/frz", "/unfreezing", "/unfrz", ".freezing",
-            ".frz", ".textlist", ".textclear", ".textadd", ".textremove",
-            ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords",
-            ".setcountercoords", ".settimercolor", ".setcountercolor", ".getstats",
-            ".clearstats", ".clearallstats", ".counter", ".timer", "/mute",
-            "/muteip", "/tempmute", "/tempmuteip", "/ban", "/banip", "/tempban",
-            ".addreport", ".removereport", ".removecheckout", ".autocopy",
-            ".autoban", ".vanish", ".addcheckout"};
-
     public static String[] HelpCommands = {".hm", ".help"};
 
     public static String[] FreezerCommands = {"/sban", "/freezing", "/frz", "/unfreezing", "/unfrz", ".freezing", ".frz"};

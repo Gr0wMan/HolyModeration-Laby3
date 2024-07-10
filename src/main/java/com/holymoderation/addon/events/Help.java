@@ -45,6 +45,7 @@ public class Help {
             ClientMessage(GOLD + ".dupeip" + RESET + " - включает/выключает автоматический /dupeip при проверке");
             ClientMessage(GOLD + ".vanish" + RESET + " - включает/выключает автованиш при заходе на анку");
             ClientMessage(GOLD + ".autocopy" + RESET + " - включает/выключает автоматическое копирование айди AnyDesk от игрока");
+            ClientMessage(GOLD + ".autoban" + RESET + " - включает/выключает автоматический бан игрока, который ливнул с вашей проверки");
             ClientMessage("");
             ClientMessage(RED + "ТАЙМЕР:");
             ClientMessage(GOLD + ".timer" + RESET + " - включает/выключает отображение таймера при проверке");

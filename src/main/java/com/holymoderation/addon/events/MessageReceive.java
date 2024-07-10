@@ -26,14 +26,14 @@ public class MessageReceive {
                     if (receivedText.startsWith("[" + Player + " ->")) {
                         String msgText = receivedText.split("я]", 0)[1].replace(" ", "");
 
-                        if (CheckCorrectLong(msgText)) {
+                        if (CheckCorrectLong(msgText) && msgText.length() >= 9 && msgText.length() <= 11) {
                             CopyToClipboard(msgText);
                         }
                     }
 
                     String chatText = receivedText.split(":")[1].replace(" ", "");
 
-                    if (CheckCorrectLong(chatText)) {
+                    if (CheckCorrectLong(chatText) && chatText.length() >= 9 && chatText.length() <= 11) {
                         CopyToClipboard(chatText);
                     }
                 }
