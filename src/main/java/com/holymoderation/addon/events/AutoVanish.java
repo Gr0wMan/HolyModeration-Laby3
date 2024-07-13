@@ -5,6 +5,7 @@ import static com.holymoderation.addon.HMManager.*;
 import static com.holymoderation.addon.SettingsManager.*;
 
 import net.labymod.api.event.Subscribe;
+import net.labymod.api.event.events.client.chat.MessageSendEvent;
 import net.labymod.api.event.events.network.server.ServerSwitchEvent;
 
 public class AutoVanish {
@@ -13,6 +14,14 @@ public class AutoVanish {
     public void OnServerSwitchEvent(ServerSwitchEvent event) {
         if (AutoVanishEnabled) {
             ChatMessage("/v");
+            VanishEnabled = true;
         }
+    }
+
+    @Subscribe
+    public void OnMessageSend(MessageSendEvent event) {
+       if (event.getMessage().startsWith("/v")) {
+           VanishEnabled = !VanishEnabled;
+       }
     }
 }

@@ -165,10 +165,19 @@ public class Settings {
                     case (".vanish"):
                         AutoVanishEnabled = !AutoVanishEnabled;
                         if (AutoVanishEnabled) {
-                            ClientMessage(YELLOW + "Автоматический ваниш при заходе на анку" + GREEN + " ВКЛЮЧЁН");
+                            ClientMessage(YELLOW + "Автоматический ваниш" + GREEN + " ВКЛЮЧЁН");
                         }
                         else {
-                            ClientMessage(YELLOW + "Автоматический ваниш при заходе на анку" + RED + " ВЫКЛЮЧЕН");
+                            ClientMessage(YELLOW + "Автоматический ваниш" + RED + " ВЫКЛЮЧЕН");
+                        }
+                        break;
+                    case (".autotp"):
+                        AutoTpEnabled = !AutoTpEnabled;
+                        if (AutoTpEnabled) {
+                            ClientMessage(YELLOW + "Атоматический телепорт на /warp logo" + GREEN + " ВКЛЮЧЁН");
+                        }
+                        else {
+                            ClientMessage(YELLOW + "Атоматический телепорт на /warp logo" + RED + " ВЫКЛЮЧЕН");
                         }
                         break;
                 }

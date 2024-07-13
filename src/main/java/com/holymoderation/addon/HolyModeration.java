@@ -24,7 +24,6 @@ public class HolyModeration extends LabyModAddon {
     getApi().getEventService().registerListener(new Help());
     getApi().getEventService().registerListener(new Punishments());
     getApi().getEventService().registerListener(new Counter());
-    getApi().getEventService().registerListener(new UpdateChecker());
     getApi().getEventService().registerListener(new MessageReceive());
     getApi().getEventService().registerListener(new AutoVanish());
   }
@@ -57,11 +56,14 @@ public class HolyModeration extends LabyModAddon {
     TBans = getConfig().has("tbans") ? getConfig().get("tbans").getAsInt() : 0;
     TMutes = getConfig().has("tmutes") ? getConfig().get("tmutes").getAsInt() : 0;
 
-    AutoAnyDeskEnabled = getConfig().has("auto_any_desk_copy") ? getConfig().get("auto_any_desk_copy").getAsBoolean() : false;
-    AutoBanEnabled = getConfig().has("auto_ban") ? getConfig().get("auto_ban").getAsBoolean() : false;
+    AutoAnyDeskEnabled = getConfig().has("auto_any_desk_copy") ? getConfig().get("auto_any_desk_copy").getAsBoolean() : true;
+    AutoBanEnabled = getConfig().has("auto_ban") ? getConfig().get("auto_ban").getAsBoolean() : true;
     AutoVanishEnabled = getConfig().has("auto_vanish") ? getConfig().get("auto_vanish").getAsBoolean() : false;
     DupeIpEnabled = getConfig().has("enable_dupe_ip") ? getConfig().get("enable_dupe_ip").getAsBoolean() : false;
+    AutoTpEnabled = getConfig().has("enable_auto_tp") ? getConfig().get("enable_auto_tp").getAsBoolean() : true;
     Texts = getConfig().has("texts_list") ? getConfig().get("texts_list").getAsString() : null;
+
+    SaveCfg();
   }
 
   @Override
@@ -73,6 +75,8 @@ public class HolyModeration extends LabyModAddon {
     if (!saveCfg) {
       return;
     }
+
+    saveCfg = false;
 
     HolyModeration.this.getConfig().addProperty("vk_url", VkUrl);
 
@@ -104,11 +108,10 @@ public class HolyModeration extends LabyModAddon {
     HolyModeration.this.getConfig().addProperty("auto_ban", AutoBanEnabled);
     HolyModeration.this.getConfig().addProperty("auto_vanish", AutoVanishEnabled);
     HolyModeration.this.getConfig().addProperty("enable_dupe_ip", DupeIpEnabled);
+    HolyModeration.this.getConfig().addProperty("enable_auto_tp", AutoTpEnabled);
     HolyModeration.this.getConfig().addProperty("texts_list", Texts);
 
     HolyModeration.this.saveConfig();
-
-    saveCfg = false;
   }
 
   public static void SaveCfg() {

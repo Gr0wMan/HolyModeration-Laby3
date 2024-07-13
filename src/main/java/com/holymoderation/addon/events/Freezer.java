@@ -11,26 +11,32 @@ import static com.holymoderation.addon.Colors.*;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 public class Freezer {
+
+    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
     @Subscribe
     public void OnUpdate(MessageSendEvent event) {
         String message = event.getMessage();
         String command = message.split(" ")[0];
-
+        //АВТОТП
         if (IsArrayContains(FreezerCommands, command)) {
             event.setCancelled(true);
             String[] messageSplit;
             switch (command) {
                 case ("/freezing"):
                 case ("/frz"): {
-                    messageSplit = message.split(" ", 2);
                     if (Player != null) {
                         ClientMessage(RED + "Вы уже проверяете какого-то игрока! " +
                                 RED + "Сначала закончите текущую проверку. --> " + GOLD + "/unfreezing"
                                 + " или " + GOLD + "/unfrz");
                         return;
                     }
+                    messageSplit = message.split(" ", 2);
                     if (messageSplit.length < 2) {
                         ClientMessage(RED + "Вы не указали ник игрока!");
                         return;
@@ -47,9 +53,15 @@ public class Freezer {
                     if (DupeIpEnabled) {
                         ChatMessage("/dupeip " + Player);
                     }
-                    if (AutoVanishEnabled) {
+                    if (AutoVanishEnabled && VanishEnabled) {
                         ChatMessage("/v");
                     }
+                    if (AutoTpEnabled) {
+                        ChatMessage("/warp logo");
+                    }
+                    ChatMessage("/freezing " + Player);
+                    ChatMessage("/checkmute " + Player);
+                    ChatMessage("/prova");
                     if (Texts == null) {
                         ClientMessage(RED + "У вас нет настроенных текстов для отправки! " +
                                 "Добавить тексты --> " + GOLD + ".textadd");
@@ -57,12 +69,13 @@ public class Freezer {
                     }
                     else {
                         for (String text : GetSplitTexts()) {
-                            ChatMessage("/msg " + Player + " " + text);
+                            scheduler.schedule(() -> {
+                                if (Player != null) {
+                                    ChatMessage("/msg " + Player + " " + text);
+                                }
+                            }, 3, TimeUnit.SECONDS);
                         }
                     }
-                    ChatMessage("/freezing " + Player);
-                    ChatMessage("/checkmute " + Player);
-                    ChatMessage("/prova");
                     break;
                 }
 

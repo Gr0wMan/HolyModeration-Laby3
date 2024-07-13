@@ -20,10 +20,11 @@ public class HMManager {
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
             ".counter", ".timer", ".addreport", ".removereport", ".autocopy",
-            ".autoban", ".vanish", ".addnotreport", ".removenotreport"};
+            ".autoban", ".vanish", ".addnotreport", ".removenotreport", ".autotp"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
-            ".addreport", ".removereport", ".autocopy", ".vanish", ".autoban", ".addnotreport", ".removenotreport"};
+            ".addreport", ".removereport", ".autocopy", ".vanish", ".autoban", ".addnotreport",
+            ".removenotreport", ".autotp"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};
     public static String[] SettingsWithTwoArguments = {".textedit", ".settimercoords", ".setcountercoords"};
@@ -87,6 +88,9 @@ public class HMManager {
     public static void EndCheckOut() {
         ChatMessage("/freezing " + Player);
         ChatMessage("/prova");
+        if (AutoVanishEnabled && !VanishEnabled) {
+            ChatMessage("/v");
+        }
         Player = null;
     }
 

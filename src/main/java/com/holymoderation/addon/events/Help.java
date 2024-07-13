@@ -43,9 +43,10 @@ public class Help {
             ClientMessage("");
             ClientMessage(RED + "ПЕРЕКЛЮЧАТЕЛИ:");
             ClientMessage(GOLD + ".dupeip" + RESET + " - включает/выключает автоматический /dupeip при проверке");
-            ClientMessage(GOLD + ".vanish" + RESET + " - включает/выключает автованиш при заходе на анку");
+            ClientMessage(GOLD + ".vanish" + RESET + " - включает/выключает автоматический ваниш");
             ClientMessage(GOLD + ".autocopy" + RESET + " - включает/выключает автоматическое копирование айди AnyDesk от игрока");
             ClientMessage(GOLD + ".autoban" + RESET + " - включает/выключает автоматический бан игрока, который ливнул с вашей проверки");
+            ClientMessage(GOLD + ".autotp" + RESET + " - включает/выключает автоматический телепорт на /warp logo при начале проверки");
             ClientMessage("");
             ClientMessage(RED + "ТАЙМЕР:");
             ClientMessage(GOLD + ".timer" + RESET + " - включает/выключает отображение таймера при проверке");

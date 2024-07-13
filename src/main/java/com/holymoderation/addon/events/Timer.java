@@ -1,11 +1,11 @@
 package com.holymoderation.addon.events;
 
-import net.labymod.api.event.Subscribe;
-import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
-
 import static com.holymoderation.addon.HMManager.*;
 
 import static com.holymoderation.addon.SettingsManager.*;
+
+import net.labymod.api.event.Subscribe;
+import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
 
 import java.util.concurrent.TimeUnit;
 

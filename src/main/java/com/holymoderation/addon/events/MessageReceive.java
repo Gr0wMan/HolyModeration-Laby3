@@ -46,7 +46,6 @@ public class MessageReceive {
     public void AutoBan(MessageReceiveEvent event) {
         if (Player != null && AutoBanEnabled) {
             String receveivedText = event.getComponent().getString();
-
             if (receveivedText.startsWith("▶ Замороженный игрок " + Player)) {
                 String tempPlayer = Player;
                 EndCheckOut();
