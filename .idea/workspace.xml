@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d6b24e8-412b-424b-ae49-a12f88aaa96f" name="Changes" comment="k.j">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/HolyModeration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/holymoderation/addon/UpdateChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/HolyModeration.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/HolyModeration.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/version.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/HolyModeration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/UpdateChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +346,8 @@
       <workItem from="1720695754606" duration="2241000" />
       <workItem from="1720729695020" duration="11038000" />
       <workItem from="1720788991327" duration="236000" />
-      <workItem from="1720863873436" duration="7924000" />
+      <workItem from="1720863873436" duration="8566000" />
+      <workItem from="1720950059945" duration="499000" />
     </task>
     <servers />
   </component>
@@ -382,17 +370,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/holymoderation/addon/events/Freezer.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

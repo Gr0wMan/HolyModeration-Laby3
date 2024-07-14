@@ -23,7 +23,6 @@ public class Freezer {
     public void OnUpdate(MessageSendEvent event) {
         String message = event.getMessage();
         String command = message.split(" ")[0];
-        //АВТОТП
         if (IsArrayContains(FreezerCommands, command)) {
             event.setCancelled(true);
             String[] messageSplit;
@@ -55,6 +54,7 @@ public class Freezer {
                     }
                     if (AutoVanishEnabled && VanishEnabled) {
                         ChatMessage("/v");
+                        VanishEnabled = false;
                     }
                     if (AutoTpEnabled) {
                         ChatMessage("/warp logo");
