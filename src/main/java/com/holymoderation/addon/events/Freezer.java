@@ -73,7 +73,7 @@ public class Freezer {
                                 if (Player != null) {
                                     ChatMessage("/msg " + Player + " " + text);
                                 }
-                            }, 3, TimeUnit.SECONDS);
+                            }, 5, TimeUnit.SECONDS);
                         }
                     }
                     break;
