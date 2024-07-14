@@ -20,7 +20,7 @@ public class SettingsManager {
     public static int CXCoords;
     public static int CYCoords;
     public static int CCustomColor;
-    
+
     //all time
     public static int Checkouts;
     public static int Reports;
@@ -43,7 +43,6 @@ public class SettingsManager {
     //Freezer
     public static boolean DupeIpEnabled;
     public static boolean AutoAnyDeskEnabled;
-    public static boolean AutoBanEnabled;
     public static boolean AutoVanishEnabled;
     public static boolean AutoTpEnabled;
     public static String Texts;

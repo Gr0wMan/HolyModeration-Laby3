@@ -41,11 +41,10 @@ public class Settings {
                         ClientMessage(AQUA + "Список ваших текстов:");
                         if (Texts == null) {
                             ClientMessage(RED + "У вас нет настроенных текстов");
-                        }
-                        else {
+                        } else {
                             String[] splitTexts = GetSplitTexts();
                             for (int i = 0; i < splitTexts.length; i++) {
-                                ClientMessage((i+1) + ". " + splitTexts[i]);
+                                ClientMessage((i + 1) + ". " + splitTexts[i]);
                             }
                         }
                         break;
@@ -63,8 +62,7 @@ public class Settings {
                         DupeIpEnabled = !DupeIpEnabled;
                         if (DupeIpEnabled) {
                             ClientMessage(YELLOW + "Автоматический /dupeip" + GREEN + " ВКЛЮЧЁН");
-                        }
-                        else {
+                        } else {
                             ClientMessage(YELLOW + "Автоматический /dupeip" + RED + " ВЫКЛЮЧЕН");
                         }
                         break;
@@ -72,8 +70,7 @@ public class Settings {
                         TimerEnabled = !TimerEnabled;
                         if (TimerEnabled) {
                             ClientMessage(YELLOW + "Таймер" + GREEN + " ВКЛЮЧЁН");
-                        }
-                        else {
+                        } else {
                             ClientMessage(YELLOW + "Таймер" + RED + " ВЫКЛЮЧЁН");
                         }
                         break;
@@ -81,8 +78,7 @@ public class Settings {
                         CounterEnabled = !CounterEnabled;
                         if (CounterEnabled) {
                             ClientMessage(YELLOW + "Счётчик" + GREEN + " ВКЛЮЧЁН");
-                        }
-                        else {
+                        } else {
                             ClientMessage(YELLOW + "Счётчик" + RED + " ВЫКЛЮЧЁН");
                         }
                         break;
@@ -98,8 +94,7 @@ public class Settings {
                         if (clearStatsMessage) {
                             TCheckouts = TReports = TNotReports = TPunishments = TBans = TMutes = 0;
                             ClientMessage(GREEN + "Вы успешно очистили вашу статистику!");
-                        }
-                        else {
+                        } else {
                             ClientMessage(AQUA + "Вы " + RED + "УВЕРЕНЫ" + AQUA
                                     + ", что хотите очистить вашу статистику? Если да, то напишите команду ещё раз");
                         }
@@ -109,8 +104,7 @@ public class Settings {
                         if (clearAllStatsMessage) {
                             Checkouts = Reports = NotReports = Punishments = Bans = Mutes = 0;
                             ClientMessage(GREEN + "Вы успешно очистили " + RED + "ВСЮ" + GREEN + " вашу статистику!");
-                        }
-                        else {
+                        } else {
                             ClientMessage(AQUA + "Вы " + RED + "УВЕРЕНЫ" + AQUA + ", что хотите очистить " + RED
                                     + "ВСЮ" + AQUA + " вашу статистику? Если да, то напишите команду ещё раз");
                         }
@@ -148,26 +142,15 @@ public class Settings {
                         AutoAnyDeskEnabled = !AutoAnyDeskEnabled;
                         if (AutoAnyDeskEnabled) {
                             ClientMessage(YELLOW + "Автоматическое копирование айди AnyDesk" + GREEN + " ВКЛЮЧЕНО");
-                        }
-                        else {
+                        } else {
                             ClientMessage(YELLOW + "Автоматическое копирование айди AnyDesk" + RED + " ВЫКЛЮЧЕНО");
-                        }
-                        break;
-                    case (".autoban"):
-                        AutoBanEnabled = !AutoBanEnabled;
-                        if (AutoBanEnabled) {
-                            ClientMessage(YELLOW + "Автоматический бан при ливе с проверки" + GREEN + " ВКЛЮЧЁН");
-                        }
-                        else {
-                            ClientMessage(YELLOW + "Автоматический бан при ливе с проверки" + RED + " ВЫКЛЮЧЕН");
                         }
                         break;
                     case (".vanish"):
                         AutoVanishEnabled = !AutoVanishEnabled;
                         if (AutoVanishEnabled) {
                             ClientMessage(YELLOW + "Автоматический ваниш" + GREEN + " ВКЛЮЧЁН");
-                        }
-                        else {
+                        } else {
                             ClientMessage(YELLOW + "Автоматический ваниш" + RED + " ВЫКЛЮЧЕН");
                         }
                         break;
@@ -175,14 +158,12 @@ public class Settings {
                         AutoTpEnabled = !AutoTpEnabled;
                         if (AutoTpEnabled) {
                             ClientMessage(YELLOW + "Атоматический телепорт на /warp logo" + GREEN + " ВКЛЮЧЁН");
-                        }
-                        else {
+                        } else {
                             ClientMessage(YELLOW + "Атоматический телепорт на /warp logo" + RED + " ВЫКЛЮЧЕН");
                         }
                         break;
                 }
-            }
-            else if (IsArrayContains(SettingsWithOneArgument, command)) {
+            } else if (IsArrayContains(SettingsWithOneArgument, command)) {
                 messageSplit = message.split(" ", 2);
                 switch (command) {
                     case (".setvk"):
@@ -248,11 +229,11 @@ public class Settings {
                             ClientMessage(RED + "Вы не указали айди цвета!");
                         }
                         String stringColor = "0x" + messageSplit[1];
-                        int intColor; {
+                        int intColor;
+                        {
                             try {
                                 intColor = Integer.decode(stringColor);
-                            }
-                            catch (NumberFormatException e) {
+                            } catch (NumberFormatException e) {
                                 ClientMessage(RED + "Некорректный цветовой код!");
                                 return;
                             }
@@ -269,8 +250,7 @@ public class Settings {
                         break;
                     }
                 }
-            }
-            else if (IsArrayContains(SettingsWithTwoArguments, command)) {
+            } else if (IsArrayContains(SettingsWithTwoArguments, command)) {
                 messageSplit = message.split(" ", 3);
                 switch (command) {
                     case (".textedit"):
@@ -310,8 +290,7 @@ public class Settings {
                         if (messageSplit.length == 1) {
                             ClientMessage(RED + "Вы не указали X и Y координаты!");
                             return;
-                        }
-                        else if (messageSplit.length == 2) {
+                        } else if (messageSplit.length == 2) {
                             ClientMessage(RED + "Вы не указали Y координату!");
                             return;
                         }

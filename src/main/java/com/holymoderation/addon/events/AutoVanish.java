@@ -20,8 +20,8 @@ public class AutoVanish {
 
     @Subscribe
     public void OnMessageSend(MessageSendEvent event) {
-       if (event.getMessage().startsWith("/v")) {
-           VanishEnabled = !VanishEnabled;
-       }
+        if (event.getMessage().startsWith("/v")) {
+            VanishEnabled = !VanishEnabled;
+        }
     }
 }

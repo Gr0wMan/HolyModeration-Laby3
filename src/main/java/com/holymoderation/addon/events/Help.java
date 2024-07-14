@@ -16,8 +16,7 @@ public class Help {
         String message = event.getMessage();
         messageSplit = message.split(" ");
         String command = messageSplit[0];
-        if (IsArrayContains(HelpCommands, command))
-        {
+        if (IsArrayContains(HelpCommands, command)) {
             event.setCancelled(true);
             ClientMessage(BLUE + "HM Help");
             ClientMessage(GOLD + ".hm" + RESET + " или " + GOLD + ".help" + RESET + " - показывает HM Help");
@@ -45,7 +44,6 @@ public class Help {
             ClientMessage(GOLD + ".dupeip" + RESET + " - включает/выключает автоматический /dupeip при проверке");
             ClientMessage(GOLD + ".vanish" + RESET + " - включает/выключает автоматический ваниш");
             ClientMessage(GOLD + ".autocopy" + RESET + " - включает/выключает автоматическое копирование айди AnyDesk от игрока");
-            ClientMessage(GOLD + ".autoban" + RESET + " - включает/выключает автоматический бан игрока, который ливнул с вашей проверки");
             ClientMessage(GOLD + ".autotp" + RESET + " - включает/выключает автоматический телепорт на /warp logo при начале проверки");
             ClientMessage("");
             ClientMessage(RED + "ТАЙМЕР:");
@@ -77,8 +75,6 @@ public class Help {
             ClientMessage(GOLD + "/ban" + GREEN + " nick reason" + RESET + " - бан навсегда");
             ClientMessage(GOLD + "/banip" + GREEN + " nick reason" + RESET + " - бан по айпи на время/навсегда");
             ClientMessage(GOLD + "/tempban" + GREEN + " nick time reason" + RESET + " - бан на время");
-            ClientMessage("");
-            ClientMessage(GREEN + "Ссылки на инструкцию к моду и исходный код можно найти в файле 'README.TXT'");
         }
     }
 }

@@ -20,11 +20,11 @@ public class HMManager {
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
             ".counter", ".timer", ".addreport", ".removereport", ".autocopy",
-            ".autoban", ".vanish", ".addnotreport", ".removenotreport", ".autotp"};
+            ".vanish", ".addnotreport", ".removenotreport", ".autotp"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
-            ".addreport", ".removereport", ".autocopy", ".vanish", ".autoban", ".addnotreport",
-            ".removenotreport", ".autotp"};
+            ".addreport", ".removereport", ".autocopy", ".vanish", ".addnotreport", ".removenotreport",
+            ".autotp"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};
     public static String[] SettingsWithTwoArguments = {".textedit", ".settimercoords", ".setcountercoords"};
@@ -52,25 +52,25 @@ public class HMManager {
     }
 
     public static boolean CheckCorrectInt(String value) {
-        int newValue = 0; {
+        int newValue = 0;
+        {
             try {
                 newValue = Integer.parseInt(value);
-                return(true);
-            }
-            catch (NumberFormatException e) {
-                return(false);
+                return (true);
+            } catch (NumberFormatException e) {
+                return (false);
             }
         }
     }
 
     public static boolean CheckCorrectLong(String value) {
-        long newValue = 0; {
+        long newValue = 0;
+        {
             try {
                 newValue = Long.parseLong(value);
-                return(true);
-            }
-            catch (NumberFormatException e) {
-                return(false);
+                return (true);
+            } catch (NumberFormatException e) {
+                return (false);
             }
         }
     }
@@ -78,7 +78,7 @@ public class HMManager {
     public static int Rainbow(int delay) {
         double rainbowState = Math.ceil((System.currentTimeMillis() + delay) / 20.0D);
         rainbowState %= 360.0D;
-        return Color.getHSBColor((float)(rainbowState / 360.0D), 0.5F, 1.0F).getRGB();
+        return Color.getHSBColor((float) (rainbowState / 360.0D), 0.5F, 1.0F).getRGB();
     }
 
     public static void DrawString(RenderGameOverlayEvent event, String text, int x, int y, int color) {
@@ -90,6 +90,7 @@ public class HMManager {
         ChatMessage("/prova");
         if (AutoVanishEnabled && !VanishEnabled) {
             ChatMessage("/v");
+            VanishEnabled = true;
         }
         Player = null;
     }
@@ -118,13 +119,9 @@ public class HMManager {
         else
             ChatMessage(punishCommand + " " + player + " " + reason + " -s");
 
-        if (punishCommand.equals("/mute") || punishCommand.equals("/muteip") || punishCommand.equals("/tempmute") || punishCommand.equals("/tempmuteip"))
-        {
+        if (punishCommand.equals("/mute") || punishCommand.equals("/muteip") || punishCommand.equals("/tempmute") || punishCommand.equals("/tempmuteip")) {
             IncreaseInfo("mutes");
-        }
-
-        else if (punishCommand.equals("/ban") || punishCommand.equals("/banip") || punishCommand.equals("/tempban"))
-        {
+        } else if (punishCommand.equals("/ban") || punishCommand.equals("/banip") || punishCommand.equals("/tempban")) {
             IncreaseInfo("bans");
         }
         IncreaseInfo("punishments");
@@ -138,13 +135,9 @@ public class HMManager {
         else
             ChatMessage(command + " " + player + " " + time + " " + reason + " -s");
 
-        if (command.equals("/mute") || command.equals("/muteip") || command.equals("/tempmute") || command.equals("/tempmuteip"))
-        {
+        if (command.equals("/mute") || command.equals("/muteip") || command.equals("/tempmute") || command.equals("/tempmuteip")) {
             IncreaseInfo("mutes");
-        }
-
-        else if (command.equals("/ban") || command.equals("/banip") || command.equals("/tempban"))
-        {
+        } else if (command.equals("/ban") || command.equals("/banip") || command.equals("/tempban")) {
             IncreaseInfo("bans");
         }
         IncreaseInfo("punishments");

@@ -14,17 +14,17 @@ public class Counter {
         if (!CounterEnabled) {
             return;
         }
-        DrawString(event,"Всего наказаний: " + TPunishments, CXCoords, CYCoords,
+        DrawString(event, "Всего наказаний: " + TPunishments, CXCoords, CYCoords,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
-        DrawString(event,"Мутов: " + TMutes, CXCoords, CYCoords + 10,
+        DrawString(event, "Мутов: " + TMutes, CXCoords, CYCoords + 10,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
-        DrawString(event,"Банов: " + TBans, CXCoords + 60, CYCoords + 10,
+        DrawString(event, "Банов: " + TBans, CXCoords + 60, CYCoords + 10,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
-        DrawString(event,"Всего проверок: " + TCheckouts, CXCoords, CYCoords + 10*3,
+        DrawString(event, "Всего проверок: " + TCheckouts, CXCoords, CYCoords + 10 * 3,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
-        DrawString(event,"Репортов: " + TReports, CXCoords, CYCoords + 10*4,
+        DrawString(event, "Репортов: " + TReports, CXCoords, CYCoords + 10 * 4,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
-        DrawString(event,"Обычных проверок: " + TNotReports, CXCoords + 78, CYCoords + 10*4,
+        DrawString(event, "Обычных проверок: " + TNotReports, CXCoords + 78, CYCoords + 10 * 4,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
     }
 }

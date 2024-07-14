@@ -48,7 +48,7 @@ public class Punishments {
                     return;
                 }
                 if ((lastChar == 'h' || lastChar == 'H' || lastChar == 'd' || lastChar == 'D')
-                        && CheckCorrectInt(messageSplit[1].substring(0, messageSplit[1].length()-1))) {
+                        && CheckCorrectInt(messageSplit[1].substring(0, messageSplit[1].length() - 1))) {
                     if (!StrangePunishmentConfirm) {
                         ClientMessage(RESET + "Вы " + RED + "УВЕРЕНЫ" + RESET
                                 + ", что хотите выдать наказание игроку " + GOLD + messageSplit[1] + RESET + "?");
@@ -57,8 +57,7 @@ public class Punishments {
                         StrangeMessage = message;
                         StrangePunishmentConfirm = true;
                         return;
-                    }
-                    else {
+                    } else {
                         StrangePunishmentConfirm = false;
                         StrangeMessage = "null";
                     }
@@ -72,8 +71,7 @@ public class Punishments {
                         StrangeFrzMessage = message;
                         StrangeFrzPunishmentConfirm = true;
                         return;
-                    }
-                    else {
+                    } else {
                         StrangeFrzMessage = "null";
                     }
                 }
@@ -106,8 +104,7 @@ public class Punishments {
                     }
                     Punish(command, nick, time, reason, true);
                 }
-            }
-            else if (IsArrayContains(InfinityPunishments, command)) {
+            } else if (IsArrayContains(InfinityPunishments, command)) {
                 messageSplit = message.split(" ", 3);
                 switch (messageSplit.length) {
                     case (1):

@@ -26,11 +26,10 @@ public class Timer {
                 DrawString(event, "Текущая проверка:", TXCoords, TYCoords,
                         TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
                 DrawString(event, Player + " | " + stopWatch.getTime(TimeUnit.MINUTES) + ":"
-                                + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES)*60),
+                                + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES) * 60),
                         TXCoords, (TYCoords + 10), TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
             }
-        }
-        else {
+        } else {
             stopWatch = null;
         }
     }

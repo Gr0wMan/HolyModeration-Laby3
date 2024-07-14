@@ -43,8 +43,7 @@ public class Freezer {
                     Player = messageSplit[1];
                     if (Player.split(" ")[Player.split(" ").length - 1].equals("-r")) {
                         IncreaseInfo("reports");
-                    }
-                    else {
+                    } else {
                         IncreaseInfo("notreports");
                     }
                     Player = Player.split(" ")[0];
@@ -66,8 +65,7 @@ public class Freezer {
                         ClientMessage(RED + "У вас нет настроенных текстов для отправки! " +
                                 "Добавить тексты --> " + GOLD + ".textadd");
                         ClientMessage(RED + "Просмотреть тексты --> " + GOLD + ".textlist");
-                    }
-                    else {
+                    } else {
                         for (String text : GetSplitTexts()) {
                             scheduler.schedule(() -> {
                                 if (Player != null) {
@@ -80,7 +78,7 @@ public class Freezer {
                 }
 
                 case ("/unfreezing"):
-                case("/unfrz"): {
+                case ("/unfrz"): {
                     if (Player == null) {
                         ClientMessage(RED + "Вы никого не проверяете!");
                         return;

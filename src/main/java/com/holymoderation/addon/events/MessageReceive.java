@@ -42,6 +42,7 @@ public class MessageReceive {
         }
     }
 
+    /*
     @Subscribe
     public void AutoBan(MessageReceiveEvent event) {
         if (Player != null && AutoBanEnabled) {
@@ -58,10 +59,11 @@ public class MessageReceive {
             }
         }
     }
+    */
 
     public static void CopyToClipboard(String text) {
         StringSelection strsel = new StringSelection(text);
         Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clip.setContents(strsel, (ClipboardOwner)null);
+        clip.setContents(strsel, (ClipboardOwner) null);
     }
 }
