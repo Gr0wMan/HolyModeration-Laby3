@@ -28,6 +28,7 @@ public class SettingsManager {
     public static int Punishments;
     public static int Bans;
     public static int Mutes;
+    public static int Garants;
     //all time
 
     //temp
@@ -37,8 +38,16 @@ public class SettingsManager {
     public static int TPunishments;
     public static int TBans;
     public static int TMutes;
+    public static int TGarants;
     //temp
     //Counter
+
+    //Vanish
+    public static boolean VanishStatusEnabled;
+    public static int VXCoords;
+    public static int VYCoords;
+    public static int VCustomColor;
+    //Vanish
 
     //Freezer
     public static boolean DupeIpEnabled;
@@ -47,4 +56,12 @@ public class SettingsManager {
     public static boolean AutoTpEnabled;
     public static String Texts;
     //Freezer
+
+    //BanColors
+    public static boolean CPEnabled;
+    public static String VkColor;
+    public static String QColor;
+    public static String DefaultColor;
+    public static String DescriptionColor;
+    //BanColors
 }

@@ -1,10 +1,7 @@
 package com.holymoderation.addon.events;
 
 import static com.holymoderation.addon.HMManager.*;
-
 import static com.holymoderation.addon.SettingsManager.*;
-
-import static com.holymoderation.addon.Colors.*;
 
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageReceiveEvent;
@@ -39,6 +36,23 @@ public class MessageReceive {
                 }
 
             }
+        }
+    }
+
+    @Subscribe
+    public void GarantCounter(MessageReceiveEvent event) {
+        if (event.getComponent().getString().startsWith("▶ Сделка завершена.")) {
+            IncreaseInfo("garants");
+        }
+    }
+
+    @Subscribe
+    public void VanishChecker(MessageReceiveEvent event) {
+        String[] messageSplit = event.getComponent().getString().split(" ");
+        if (messageSplit[0].equals("Скрытие") && messageSplit[2].equals("включен")) {
+            VanishEnabled = true;
+        } else if (messageSplit[0].equals("Скрытие") && messageSplit[2].equals("выключено")) {
+            VanishEnabled = false;
         }
     }
 

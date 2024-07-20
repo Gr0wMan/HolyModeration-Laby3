@@ -1,7 +1,6 @@
 package com.holymoderation.addon.events;
 
 import static com.holymoderation.addon.HMManager.*;
-
 import static com.holymoderation.addon.SettingsManager.*;
 
 import net.labymod.api.event.Subscribe;
@@ -25,6 +24,8 @@ public class Counter {
         DrawString(event, "Репортов: " + TReports, CXCoords, CYCoords + 10 * 4,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
         DrawString(event, "Обычных проверок: " + TNotReports, CXCoords + 78, CYCoords + 10 * 4,
+                CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
+        DrawString(event, "Успешных гарантов: " + TGarants, CXCoords, CYCoords + 10 * 6,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
     }
 }

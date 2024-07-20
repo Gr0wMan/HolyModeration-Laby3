@@ -1,11 +1,8 @@
 package com.holymoderation.addon.events;
 
 import static com.holymoderation.addon.HolyModeration.SaveCfg;
-
 import static com.holymoderation.addon.HMManager.*;
-
 import static com.holymoderation.addon.SettingsManager.*;
-
 import static com.holymoderation.addon.Colors.*;
 
 import net.labymod.api.event.Subscribe;

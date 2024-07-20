@@ -1,7 +1,6 @@
 package com.holymoderation.addon.events;
 
 import static com.holymoderation.addon.HMManager.*;
-
 import static com.holymoderation.addon.SettingsManager.*;
 
 import net.labymod.api.event.Subscribe;
@@ -25,8 +24,12 @@ public class Timer {
                 }
                 DrawString(event, "Текущая проверка:", TXCoords, TYCoords,
                         TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
-                DrawString(event, Player + " | " + stopWatch.getTime(TimeUnit.MINUTES) + ":"
-                                + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES) * 60),
+                String secondsString = (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES) * 60) < 10
+                        ? "0" + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES) * 60)
+                        : "" + (stopWatch.getTime(TimeUnit.SECONDS) - stopWatch.getTime(TimeUnit.MINUTES) * 60);
+                String minutesString = stopWatch.getTime(TimeUnit.MINUTES) < 10
+                        ? "0" + stopWatch.getTime(TimeUnit.MINUTES) : "" + stopWatch.getTime(TimeUnit.MINUTES);
+                DrawString(event, Player + " | " + minutesString + ":" + secondsString,
                         TXCoords, (TYCoords + 10), TCustomColor == 0x0 ? Rainbow(300) : TCustomColor);
             }
         } else {

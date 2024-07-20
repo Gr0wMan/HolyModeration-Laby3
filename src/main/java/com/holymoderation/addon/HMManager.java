@@ -19,15 +19,18 @@ public class HMManager {
     public static String[] SettingsCommands = {".textlist", ".textclear", ".textadd", ".textremove",
             ".textedit", ".setvk", ".getvk", ".dupeip", ".settimercoords", ".setcountercoords",
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
-            ".counter", ".timer", ".addreport", ".removereport", ".autocopy",
-            ".vanish", ".addnotreport", ".removenotreport", ".autotp"};
+            ".counter", ".timer", ".addreport", ".removereport", ".autocopy", ".vanish",
+            ".addnotreport", ".removenotreport", ".autotp", ".vanishstatus", ".setvanishcoords",
+            ".setvanishcolor", ".cp", ".setvkc", ".setqc", ".setdefc", ".setdesc"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
             ".addreport", ".removereport", ".autocopy", ".vanish", ".addnotreport", ".removenotreport",
-            ".autotp"};
+            ".autotp", ".vanishstatus", ".cp"};
     public static String[] SettingsWithOneArgument = {".textadd",
-            ".textremove", ".setvk", ".settimercolor", ".setcountercolor"};
-    public static String[] SettingsWithTwoArguments = {".textedit", ".settimercoords", ".setcountercoords"};
+            ".textremove", ".setvk", ".settimercolor", ".setcountercolor", ".setvanishcolor",
+            ".setvkc", ".setqc", ".setdefc", ".setdesc"};
+    public static String[] SettingsWithTwoArguments = {".textedit",
+            ".settimercoords", ".setcountercoords", ".setvanishcoords"};
 
     public static String[] PunishmentsCommands = {"/mute", "/muteip",
             "/tempmute", "/tempmuteip", "/ban", "/banip", "/tempban"};
@@ -90,7 +93,6 @@ public class HMManager {
         ChatMessage("/prova");
         if (AutoVanishEnabled && !VanishEnabled) {
             ChatMessage("/v");
-            VanishEnabled = true;
         }
         Player = null;
     }
@@ -114,10 +116,28 @@ public class HMManager {
     }
 
     public static void Punish(String punishCommand, String player, String reason, boolean addVk) {
-        if (addVk)
-            ChatMessage(punishCommand + " " + player + " " + reason + " | Вопросы? " + VkUrl + " -s");
-        else
-            ChatMessage(punishCommand + " " + player + " " + reason + " -s");
+        if (CPEnabled) {
+            String cpReason = reason;
+            String banipTime = "";
+            banipTime = reason.split(" ")[0];
+            if (CheckCorrectInt(banipTime.substring(0, banipTime.length() - 1))) {
+                cpReason = cpReason.replace(banipTime + " ", "");
+            }
+            cpReason = DefaultColor + cpReason;
+            if ((reason.contains("(") && reason.contains(")"))) {
+                cpReason = cpReason.replace("(",  "(" + DescriptionColor);
+                cpReason = cpReason.replace(")", DefaultColor + ")");
+            }
+            if (addVk)
+                ChatMessage(punishCommand + " " + player + " " + banipTime + " " + cpReason + " &r| " + QColor + "Вопросы? " + VkColor + VkUrl + " -s");
+            else
+                ChatMessage(punishCommand + " " + player + " " + cpReason + " -s");
+        } else {
+            if (addVk)
+                ChatMessage(punishCommand + " " + player + " " + reason + " | Вопросы? " + VkUrl + " -s");
+            else
+                ChatMessage(punishCommand + " " + player + " " + reason + " -s");
+        }
 
         if (punishCommand.equals("/mute") || punishCommand.equals("/muteip") || punishCommand.equals("/tempmute") || punishCommand.equals("/tempmuteip")) {
             IncreaseInfo("mutes");
@@ -130,10 +150,25 @@ public class HMManager {
     public static void Punish(String punishCommand, String player, String time, String reason, boolean addVk) {
         String command = punishCommand;
         command.toCharArray()[0] = '/';
-        if (addVk)
-            ChatMessage(command + " " + player + " " + time + " " + reason + " | Вопросы? " + VkUrl + " -s");
-        else
-            ChatMessage(command + " " + player + " " + time + " " + reason + " -s");
+        if (CPEnabled) {
+            String cpreason;
+            if ((reason.contains("(") && reason.contains(")"))) {
+                cpreason = DefaultColor + reason;
+                cpreason = cpreason.replace("(",  "(" + DescriptionColor);
+                cpreason = cpreason.replace(")", DefaultColor + ")");
+            } else {
+                cpreason = DefaultColor + reason;
+            }
+            if (addVk)
+                ChatMessage(command + " " + player + " " + time + " " + cpreason + " &r| " + QColor + "Вопросы? " + VkColor + VkUrl + " -s");
+            else
+                ChatMessage(command + " " + player + " " + time + " " + cpreason + " -s");
+        } else {
+            if (addVk)
+                ChatMessage(command + " " + player + " " + time + " " + reason + " | Вопросы? " + VkUrl + " -s");
+            else
+                ChatMessage(command + " " + player + " " + time + " " + reason + " -s");
+        }
 
         if (command.equals("/mute") || command.equals("/muteip") || command.equals("/tempmute") || command.equals("/tempmuteip")) {
             IncreaseInfo("mutes");
@@ -168,6 +203,10 @@ public class HMManager {
             case ("mutes"):
                 Mutes++;
                 TMutes++;
+                break;
+            case ("garants"):
+                Garants++;
+                TGarants++;
                 break;
         }
     }

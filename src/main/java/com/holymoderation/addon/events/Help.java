@@ -4,7 +4,6 @@ import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
 import static com.holymoderation.addon.HMManager.*;
-
 import static com.holymoderation.addon.Colors.*;
 
 public class Help {
@@ -63,9 +62,21 @@ public class Help {
             ClientMessage(GOLD + ".addnotreport" + RESET + " - добавялет простую проверку");
             ClientMessage(GOLD + ".removenotreport" + RESET + " - удаляет простую проверку");
             ClientMessage("");
+            ClientMessage(RED + "СТАТУС ВАНИША:");
+            ClientMessage(GOLD + ".vanishstatus" + RESET + " - включает/выключает отображение состояния ваниша");
+            ClientMessage(GOLD + ".setvanishcoords" + GREEN + " x y" + RESET + " - устанавливает позицию для отображения статуса ваниша");
+            ClientMessage(GOLD + ".setvanishcolor" + GREEN + " colorid" + RESET + " - устанавливает свой цвет для отображения статуса ваниша");
+            ClientMessage("");
             ClientMessage(RED + "ГАЙД ПО ЦВЕТАМ:");
             ClientMessage("Пример: " + GREEN + "ff0000" + RESET + " - красный");
             ClientMessage("Чтобы вернуть радужный цвет напишите" + GOLD + " .settimercolor/.setcountercolor" + GREEN + " 0");
+            ClientMessage("");
+            ClientMessage(RED + "ЦВЕТНЫЕ НАКАЗАНИЯ:");
+            ClientMessage(GOLD + ".cp" + RESET + " - включает/выключает цветные наказания");
+            ClientMessage(GOLD + ".setvkc" + GREEN + " color" + RESET + " - настроить цвет ссылки вк");
+            ClientMessage(GOLD + ".setqc" + GREEN + " color" + RESET + " - настроить цвет 'Вопросы?'");
+            ClientMessage(GOLD + ".setdefc" + GREEN + " color" + RESET + " - настроить основной цвет");
+            ClientMessage(GOLD + ".setdesc" + GREEN + " color" + RESET + " - настроить цвет описания наказания (то, что в скобочках)");
             ClientMessage("");
             ClientMessage(DARK_RED + "СПИСОК НАКАЗАНИЙ:");
             ClientMessage(GOLD + "/mute" + GREEN + " nick reason" + RESET + " - мут навсегда");
