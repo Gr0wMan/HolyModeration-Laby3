@@ -51,6 +51,9 @@ public class Freezer {
                     if (AutoTpEnabled) {
                         ChatMessage("/warp logo");
                     }
+                    if (AutoVanishEnabled && VanishEnabled) {
+                        ChatMessage("/v");
+                    }
                     ChatMessage("/freezing " + Player);
                     ChatMessage("/checkmute " + Player);
                     ChatMessage("/prova");
