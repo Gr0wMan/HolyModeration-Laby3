@@ -61,6 +61,8 @@ public class Help {
             ClientMessage(GOLD + ".removereport" + RESET + " - удаляет репорт");
             ClientMessage(GOLD + ".addnotreport" + RESET + " - добавялет простую проверку");
             ClientMessage(GOLD + ".removenotreport" + RESET + " - удаляет простую проверку");
+            ClientMessage(GOLD + ".addgarant" + RESET + " - добавляет гарант");
+            ClientMessage(GOLD + ".removegarant" + RESET + " - удаляет гарант");
             ClientMessage("");
             ClientMessage(RED + "СТАТУС ВАНИША:");
             ClientMessage(GOLD + ".vanishstatus" + RESET + " - включает/выключает отображение состояния ваниша");
@@ -72,7 +74,7 @@ public class Help {
             ClientMessage("Чтобы вернуть радужный цвет напишите" + GOLD + " .settimercolor/.setcountercolor" + GREEN + " 0");
             ClientMessage("");
             ClientMessage(RED + "ЦВЕТНЫЕ НАКАЗАНИЯ:");
-            ClientMessage(GOLD + ".cp" + RESET + " - включает/выключает цветные наказания");
+            ClientMessage(GOLD + ".cp" + RESET + " - NUH UH!");
             ClientMessage(GOLD + ".setvkc" + GREEN + " color" + RESET + " - настроить цвет ссылки вк");
             ClientMessage(GOLD + ".setqc" + GREEN + " color" + RESET + " - настроить цвет 'Вопросы?'");
             ClientMessage(GOLD + ".setdefc" + GREEN + " color" + RESET + " - настроить основной цвет");

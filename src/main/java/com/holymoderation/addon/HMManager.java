@@ -21,11 +21,11 @@ public class HMManager {
             ".settimercolor", ".setcountercolor", ".getstats", ".clearstats", ".clearallstats",
             ".counter", ".timer", ".addreport", ".removereport", ".autocopy", ".vanish",
             ".addnotreport", ".removenotreport", ".autotp", ".vanishstatus", ".setvanishcoords",
-            ".setvanishcolor", ".cp", ".setvkc", ".setqc", ".setdefc", ".setdesc"};
+            ".setvanishcolor", ".cp", ".setvkc", ".setqc", ".setdefc", ".setdesc", ".addgarant", ".removegarant"};
     public static String[] SettingsWithoutArguments = {".textlist", ".textclear",
             ".getvk", ".dupeip", ".getstats", ".clearstats", ".clearallstats", ".counter", ".timer",
             ".addreport", ".removereport", ".autocopy", ".vanish", ".addnotreport", ".removenotreport",
-            ".autotp", ".vanishstatus", ".cp"};
+            ".autotp", ".vanishstatus", ".cp", ".addgarant", ".removegarant"};
     public static String[] SettingsWithOneArgument = {".textadd",
             ".textremove", ".setvk", ".settimercolor", ".setcountercolor", ".setvanishcolor",
             ".setvkc", ".setqc", ".setdefc", ".setdesc"};
@@ -207,6 +207,39 @@ public class HMManager {
             case ("garants"):
                 Garants++;
                 TGarants++;
+                break;
+        }
+    }
+
+    public static void DecreaseInfo(String info) {
+        switch (info) {
+            case ("checkouts"):
+                Checkouts--;
+                TCheckouts--;
+                break;
+            case ("reports"):
+                Reports--;
+                TReports--;
+                break;
+            case ("notreports"):
+                NotReports--;
+                TNotReports--;
+                break;
+            case ("punishments"):
+                Punishments--;
+                TPunishments--;
+                break;
+            case ("bans"):
+                Bans--;
+                TBans--;
+                break;
+            case ("mutes"):
+                Mutes--;
+                TMutes--;
+                break;
+            case ("garants"):
+                Garants--;
+                TGarants--;
                 break;
         }
     }

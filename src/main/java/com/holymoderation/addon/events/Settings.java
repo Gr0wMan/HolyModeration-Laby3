@@ -8,6 +8,7 @@ import static com.holymoderation.addon.Colors.*;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -55,30 +56,6 @@ public class Settings {
                         }
                         ClientMessage(AQUA + "Ваша ссылка на вк: " + VkUrl);
                         break;
-                    case (".dupeip"):
-                        DupeIpEnabled = !DupeIpEnabled;
-                        if (DupeIpEnabled) {
-                            ClientMessage(YELLOW + "Автоматический /dupeip" + GREEN + " ВКЛЮЧЁН");
-                        } else {
-                            ClientMessage(YELLOW + "Автоматический /dupeip" + RED + " ВЫКЛЮЧЕН");
-                        }
-                        break;
-                    case (".timer"):
-                        TimerEnabled = !TimerEnabled;
-                        if (TimerEnabled) {
-                            ClientMessage(YELLOW + "Таймер" + GREEN + " ВКЛЮЧЁН");
-                        } else {
-                            ClientMessage(YELLOW + "Таймер" + RED + " ВЫКЛЮЧЁН");
-                        }
-                        break;
-                    case (".counter"):
-                        CounterEnabled = !CounterEnabled;
-                        if (CounterEnabled) {
-                            ClientMessage(YELLOW + "Счётчик" + GREEN + " ВКЛЮЧЁН");
-                        } else {
-                            ClientMessage(YELLOW + "Счётчик" + RED + " ВЫКЛЮЧЁН");
-                        }
-                        break;
                     case (".getstats"):
                         ClientMessage(AQUA + "Всего проверок: " + GOLD + Checkouts);
                         ClientMessage(AQUA + "Всего репортов: " + GOLD + Reports);
@@ -109,32 +86,44 @@ public class Settings {
                         clearAllStatsMessage = !clearAllStatsMessage;
                         break;
                     case (".addreport"):
-                        Checkouts += 1;
-                        TCheckouts += 1;
-                        Reports += 1;
-                        TReports += 1;
+                        IncreaseInfo("checkouts");
+                        IncreaseInfo("reports");
                         ClientMessage(GREEN + "Вы успешно добавили репорт!");
                         break;
                     case (".removereport"):
-                        Checkouts -= 1;
-                        TCheckouts -= 1;
-                        Reports -= 1;
-                        TReports -= 1;
+                        DecreaseInfo("checkouts");
+                        DecreaseInfo("reports");
                         ClientMessage(GREEN + "Вы успешно удалили репорт!");
                         break;
                     case (".addnotreport"):
-                        Checkouts += 1;
-                        TCheckouts += 1;
-                        NotReports += 1;
-                        TNotReports += 1;
+                        IncreaseInfo("checkouts");
+                        IncreaseInfo("notreports");
                         ClientMessage(GREEN + "Вы успешно добавили простую проверку!");
                         break;
                     case (".removenotreport"):
-                        Checkouts -= 1;
-                        TCheckouts -= 1;
-                        NotReports -= 1;
-                        TNotReports -= 1;
+                        DecreaseInfo("checkouts");
+                        DecreaseInfo("notreports");
                         ClientMessage(GREEN + "Вы успешно удалили простую проверку!");
+                        break;
+                    case (".addgarant"):
+                        IncreaseInfo("garants");
+                        ClientMessage(GREEN + "Вы успешно добавили гарант!");
+                        break;
+                    case (".removegarant"):
+                        DecreaseInfo("garants");
+                        ClientMessage(GREEN + "Вы успешно удалили гарант!");
+                        break;
+                    case (".timer"):
+                        TimerEnabled = !TimerEnabled;
+                        ClientMessage(YELLOW + "Таймер " + (TimerEnabled ? GREEN + "ВКЛЮЧЁН" : RED + "ВЫКЛЮЧЕН"));
+                        break;
+                    case (".counter"):
+                        CounterEnabled = !CounterEnabled;
+                        ClientMessage(YELLOW + "Счётчик " + (CounterEnabled ? GREEN + "ВКЛЮЧЁН" : RED + "ВЫКЛЮЧЕН"));
+                        break;
+                    case (".dupeip"):
+                        DupeIpEnabled = !DupeIpEnabled;
+                        ClientMessage(YELLOW + "Автоматический /dupeip " + (DupeIpEnabled ? GREEN + "ВКЛЮЧЁН" : RED + "ВЫКЛЮЧЕН"));
                         break;
                     case (".autocopy"):
                         AutoAnyDeskEnabled = !AutoAnyDeskEnabled;
@@ -153,8 +142,9 @@ public class Settings {
                         ClientMessage(YELLOW + "Отображение состояния ваниша " + (VanishStatusEnabled ? GREEN + "ВКЛЮЧЕНО" : RED + "ВЫКЛЮЧЕНО"));
                         break;
                     case (".cp"):
-                        CPEnabled = !CPEnabled;
-                        ClientMessage(YELLOW + "Цветные наказания " + (CPEnabled ? GREEN + "ВКЛЮЧЕНЫ" : RED + "ВЫКЛЮЧЕНЫ"));
+                        /*CPEnabled = !CPEnabled;
+                        ClientMessage(YELLOW + "Цветные наказания " + (CPEnabled ? GREEN + "ВКЛЮЧЕНЫ" : RED + "ВЫКЛЮЧЕНЫ"));*/
+                        ClientMessage("NUH UH!");
                         break;
                 }
             } else if (IsArrayContains(SettingsWithOneArgument, command)) {

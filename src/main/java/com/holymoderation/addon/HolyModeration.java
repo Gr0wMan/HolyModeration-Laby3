@@ -89,6 +89,8 @@ public class HolyModeration extends LabyModAddon {
             return;
         }
 
+        CPEnabled = false; //NUH UH
+
         saveCfg = false;
 
         HolyModeration.this.getConfig().addProperty("vk_url", VkUrl);
@@ -130,7 +132,7 @@ public class HolyModeration extends LabyModAddon {
         HolyModeration.this.getConfig().addProperty("enable_auto_tp", AutoTpEnabled);
         HolyModeration.this.getConfig().addProperty("texts_list", Texts);
 
-        HolyModeration.this.getConfig().addProperty("cp_enabled", CPEnabled);
+        HolyModeration.this.getConfig().addProperty("cp_enabled", false);
         HolyModeration.this.getConfig().addProperty("vk_color", VkColor);
         HolyModeration.this.getConfig().addProperty("q_color", QColor);
         HolyModeration.this.getConfig().addProperty("default_color", DefaultColor);

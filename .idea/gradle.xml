@@ -12,6 +12,15 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../labymod3-server-api-main/labymod-api" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../labymod3-server-api-main/labymod-api" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
