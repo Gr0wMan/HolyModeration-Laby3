@@ -26,23 +26,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LabyCheckAddon" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LabyCheckAddon" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LabyCheckAddon" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -102,7 +86,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitProjects/IntelliJ IDEA WorkSpace/HolyModeration-Laby3",
+    "last_opened_file_path": "D:/GitProjects/IntelliJ IDEA WorkSpace/CustomHitboxColor_Fabric-1.20.1",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -353,7 +337,9 @@
       <workItem from="1721460933603" duration="17576000" />
       <workItem from="1721503450600" duration="2388000" />
       <workItem from="1721994655112" duration="29000" />
-      <workItem from="1721994716050" duration="1914000" />
+      <workItem from="1721994716050" duration="2206000" />
+      <workItem from="1722027086462" duration="17000" />
+      <workItem from="1722159218364" duration="789000" />
     </task>
     <servers />
   </component>
