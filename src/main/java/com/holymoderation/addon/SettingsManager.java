@@ -6,6 +6,7 @@ public class SettingsManager {
     public static String Player;
     public static String VkUrl;
     public static boolean VanishEnabled = false;
+    public static boolean InHub = false;
     //Global
 
     //Timer

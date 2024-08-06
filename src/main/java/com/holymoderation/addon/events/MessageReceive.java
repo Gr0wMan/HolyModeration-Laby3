@@ -46,6 +46,7 @@ public class MessageReceive {
         }
     }
 
+    /*
     @Subscribe
     public void VanishChecker(MessageReceiveEvent event) {
         String[] messageSplit = event.getComponent().getString().split(" ");
@@ -55,6 +56,7 @@ public class MessageReceive {
             VanishEnabled = false;
         }
     }
+    */
 
     /*
     @Subscribe

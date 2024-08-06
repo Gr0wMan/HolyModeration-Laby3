@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/HolyModeration-Laby3.LabyCheckAddon.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IntelliJ IDEA WorkSpace.HolyModeration-Laby3.LabyCheckAddon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/IntelliJ IDEA WorkSpace.HolyModeration-Laby3.LabyCheckAddon.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IntelliJ IDEA WorkSpace.HolyModeration-Laby3.LabyCheckAddon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/IntelliJ IDEA WorkSpace.HolyModeration-Laby3.LabyCheckAddon.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HolyModeration.main.iml" filepath="$PROJECT_DIR$/.idea/modules/HolyModeration.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HolyModeration.test.iml" filepath="$PROJECT_DIR$/.idea/modules/HolyModeration.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LabyCheckAddon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LabyCheckAddon.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LabyCheckAddon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LabyCheckAddon.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addon-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/addon-example.main.iml" />
