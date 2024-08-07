@@ -196,3 +196,4 @@ public class HolyModeration extends LabyModAddon {
         DSEvent = event;
     }
 }
+//что ж, бесконечные обновления событий, как и предполагалось.
