@@ -5,7 +5,6 @@ import static com.holymoderation.addon.HMManager.*;
 import static com.holymoderation.addon.SettingsManager.*;
 import static com.holymoderation.addon.Colors.*;
 
-import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
 import java.util.concurrent.Executors;
@@ -14,10 +13,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Freezer {
 
-    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+    private static final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
-    @Subscribe
-    public void OnUpdate(MessageSendEvent event) {
+    public static void Update() {
+        if (MSEvent != null) {
+            OnMessageSend(MSEvent);
+        }
+    }
+
+    private static void OnMessageSend(MessageSendEvent event) {
         String message = event.getMessage();
         String command = message.split(" ")[0];
         if (IsArrayContains(FreezerCommands, command)) {

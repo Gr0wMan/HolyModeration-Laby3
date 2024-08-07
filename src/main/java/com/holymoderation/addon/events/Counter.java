@@ -8,11 +8,17 @@ import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
 
 public class Counter {
 
-    @Subscribe
-    public void onRender(RenderGameOverlayEvent event) {
+    public static void Update() {
+        if (RGOEvent != null) {
+            OnRenderGameOverlay(RGOEvent);
+        }
+    }
+
+    private static void OnRenderGameOverlay(RenderGameOverlayEvent event) {
         if (!CounterEnabled) {
             return;
         }
+
         DrawString(event, "Всего наказаний: " + TPunishments, CXCoords, CYCoords,
                 CCustomColor == 0x0 ? Rainbow(300) : CCustomColor);
         DrawString(event, "Мутов: " + TMutes, CXCoords, CYCoords + 10,

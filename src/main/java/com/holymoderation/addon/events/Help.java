@@ -1,17 +1,22 @@
 package com.holymoderation.addon.events;
 
-import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
 import static com.holymoderation.addon.HMManager.*;
+import static com.holymoderation.addon.SettingsManager.*;
 import static com.holymoderation.addon.Colors.*;
 
 public class Help {
 
-    public static String[] messageSplit;
+    private static String[] messageSplit;
 
-    @Subscribe
-    public void OnUpdate(MessageSendEvent event) {
+    public static void Update() {
+        if (MSEvent != null) {
+            OnMessageSend(MSEvent);
+        }
+    }
+
+    private static void OnMessageSend(MessageSendEvent event) {
         String message = event.getMessage();
         messageSplit = message.split(" ");
         String command = messageSplit[0];
@@ -21,6 +26,7 @@ public class Help {
             ClientMessage(GOLD + ".hm" + RESET + " или " + GOLD + ".help" + RESET + " - показывает HM Help");
             ClientMessage("");
             ClientMessage(DARK_RED + "ПОМОЩЬ ПО ПРОВЕРКАМ:");
+            ClientMessage(GOLD + "/try" + GREEN + " player" + RESET + " - проверяет, онлайн ли игрок, на какой он анке и время его последней активности");
             ClientMessage(GOLD + "/freezing" + GREEN + " player" + RESET + " или " + GOLD + "/frz" + GREEN + " player" + RESET + " - замораживает игрока и начинает проверку");
             ClientMessage(GOLD + "/unfreezing" + RESET + " или " + GOLD + "/unfrz" + RESET + " - размораживает игрока, который находится на вашей проверке и заканчивает проверку");
             ClientMessage(GOLD + "/sban" + GREEN + " time reason" + RESET + " - банит игрока, который сейчас на вашей проверке");

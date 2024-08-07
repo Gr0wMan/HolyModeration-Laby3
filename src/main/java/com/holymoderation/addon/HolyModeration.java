@@ -6,8 +6,14 @@ import static com.holymoderation.addon.SettingsManager.*;
 
 import net.labymod.api.LabyModAddon;
 import net.labymod.api.event.Subscribe;
+import net.labymod.api.event.events.client.chat.MessageReceiveEvent;
+import net.labymod.api.event.events.client.chat.MessageSendEvent;
 import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
+import net.labymod.api.event.events.network.server.DisconnectServerEvent;
+import net.labymod.api.event.events.network.server.LoginServerEvent;
+import net.labymod.api.event.events.network.server.ServerSwitchEvent;
 import net.labymod.settings.elements.*;
+import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
@@ -18,15 +24,6 @@ public class HolyModeration extends LabyModAddon {
     @Override
     public void onEnable() {
         getApi().getEventService().registerListener(this);
-        getApi().getEventService().registerListener(new Freezer());
-        getApi().getEventService().registerListener(new Timer());
-        getApi().getEventService().registerListener(new Settings());
-        getApi().getEventService().registerListener(new Help());
-        getApi().getEventService().registerListener(new Punishments());
-        getApi().getEventService().registerListener(new Counter());
-        getApi().getEventService().registerListener(new MessageReceive());
-        getApi().getEventService().registerListener(new AutoVanish());
-        getApi().getEventService().registerListener(new Vanish());
     }
 
     @Override
@@ -83,8 +80,12 @@ public class HolyModeration extends LabyModAddon {
     protected void fillSettings(List<SettingsElement> list) {
     }
 
-    @Subscribe
-    public void SaveCfgCheck(RenderGameOverlayEvent event) {
+    private void Update() {
+        SaveCfgCheck();
+        GetModer();
+    }
+
+    private void SaveCfgCheck() {
         if (!saveCfg) {
             return;
         }
@@ -143,5 +144,55 @@ public class HolyModeration extends LabyModAddon {
 
     public static void SaveCfg() {
         saveCfg = true;
+    }
+
+    private void GetModer() {
+        if (Moder == null) {
+            if (Minecraft.getInstance().player != null) {
+                Moder = Minecraft.getInstance().player.getName().getString();
+            }
+        }
+    }
+
+    @Subscribe
+    public void OnUpdate(RenderGameOverlayEvent event) {
+        RGOEvent = event;
+
+        Update();
+
+        Vanish.Update();
+        Timer.Update();
+        //TryProva.Update();
+        Settings.Update();
+        PunishmentsManager.Update();
+        Help.Update();
+        Freezer.Update();
+        Counter.Update();
+        AutoVanish.Update();
+    }
+
+    @Subscribe
+    public void OnMessageSend(MessageSendEvent event) {
+        MSEvent = event;
+    }
+
+    @Subscribe
+    public void OnMessageReceive(MessageReceiveEvent event) {
+        MREvent = event;
+    }
+
+    @Subscribe
+    public void OnServerSwitch(ServerSwitchEvent event) {
+        SSEvent = event;
+    }
+
+    @Subscribe
+    public void OnLoginServer(LoginServerEvent event) {
+        LSEvent = event;
+    }
+
+    @Subscribe
+    public void OnDisconnectServer(DisconnectServerEvent event) {
+        DSEvent = event;
     }
 }

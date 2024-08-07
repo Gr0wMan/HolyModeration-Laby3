@@ -1,6 +1,7 @@
 package com.holymoderation.addon;
 
 import static com.holymoderation.addon.SettingsManager.*;
+import static com.holymoderation.addon.Colors.*;
 
 import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
 import net.minecraft.client.Minecraft;
@@ -47,7 +48,7 @@ public class HMManager {
     }
 
     public static void ClientMessage(String message) {
-        Minecraft.getInstance().player.sendMessage(new StringTextComponent(message), null);
+        Minecraft.getInstance().player.sendMessage(new StringTextComponent(YELLOW + "[" + DARK_AQUA + "HM" + YELLOW + "] " + message), null);
     }
 
     public static boolean IsArrayContains(String[] array, String value) {

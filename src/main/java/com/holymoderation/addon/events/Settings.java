@@ -1,14 +1,12 @@
 package com.holymoderation.addon.events;
 
+import net.labymod.api.event.events.client.chat.MessageSendEvent;
+
 import static com.holymoderation.addon.HolyModeration.SaveCfg;
 import static com.holymoderation.addon.HMManager.*;
 import static com.holymoderation.addon.SettingsManager.*;
 import static com.holymoderation.addon.Colors.*;
 
-import net.labymod.api.event.Subscribe;
-import net.labymod.api.event.events.client.chat.MessageSendEvent;
-
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,9 +14,14 @@ public class Settings {
 
     private static boolean clearStatsMessage = false;
     private static boolean clearAllStatsMessage = false;
-
-    @Subscribe
-    public void OnUpdate(MessageSendEvent event) {
+    
+    public static void Update() {
+        if (MSEvent != null) {
+            OnMessageSend(MSEvent);
+        }
+    }
+    
+    private static void OnMessageSend(MessageSendEvent event) {
         String message = event.getMessage();
         String command = message.split(" ")[0];
 
