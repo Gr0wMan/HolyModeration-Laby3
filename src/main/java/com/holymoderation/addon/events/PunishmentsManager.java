@@ -1,5 +1,6 @@
 package com.holymoderation.addon.events;
 
+import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
 import static com.holymoderation.addon.HolyModeration.SaveCfg;
@@ -15,13 +16,8 @@ public class PunishmentsManager {
     private static String StrangeMessage = "null";
     private static String StrangeFrzMessage = "null";
 
-    public static void Update() {
-        if (MSEvent != null) {
-            OnMessageSend(MSEvent);
-        }
-    }
-
-    private static void OnMessageSend(MessageSendEvent event) {
+    @Subscribe
+    public void OnMessageSend(MessageSendEvent event) {
         String message = event.getMessage();
         String command = message.split(" ", 0)[0];
 

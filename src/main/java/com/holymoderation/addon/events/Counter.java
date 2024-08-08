@@ -8,13 +8,8 @@ import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
 
 public class Counter {
 
-    public static void Update() {
-        if (RGOEvent != null) {
-            OnRenderGameOverlay(RGOEvent);
-        }
-    }
-
-    private static void OnRenderGameOverlay(RenderGameOverlayEvent event) {
+    @Subscribe
+    public void OnRenderGameOverlay(RenderGameOverlayEvent event) {
         if (!CounterEnabled) {
             return;
         }

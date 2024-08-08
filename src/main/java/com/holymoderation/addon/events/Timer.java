@@ -3,6 +3,7 @@ package com.holymoderation.addon.events;
 import static com.holymoderation.addon.HMManager.*;
 import static com.holymoderation.addon.SettingsManager.*;
 
+import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
 
 import java.util.concurrent.TimeUnit;
@@ -13,13 +14,8 @@ public class Timer {
 
     private static StopWatch stopWatch = null;
 
-    public static void Update() {
-        if (RGOEvent != null) {
-            OnRenderGameOverlay(RGOEvent);
-        }
-    }
-
-    private static void OnRenderGameOverlay(RenderGameOverlayEvent event) {
+    @Subscribe
+    public void OnRenderGameOverlay(RenderGameOverlayEvent event) {
         if (Player != null) {
             if (TimerEnabled) {
                 if (stopWatch == null) {

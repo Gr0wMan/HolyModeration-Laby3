@@ -3,32 +3,18 @@ package com.holymoderation.addon.events;
 import static com.holymoderation.addon.HMManager.*;
 import static com.holymoderation.addon.SettingsManager.*;
 
+import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
+import net.labymod.api.event.events.network.server.DisconnectServerEvent;
+import net.labymod.api.event.events.network.server.LoginServerEvent;
+import net.labymod.api.event.events.network.server.ServerSwitchEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.GameType;
 
 public class AutoVanish {
 
-    public static void Update() {
-        if (SSEvent != null) {
-            OnServerSwitchEvent();
-        }
-
-        if (MSEvent != null) {
-            OnMessageSend(MSEvent);
-        }
-
-        if (LSEvent != null) {
-            OnLoginServer();
-        }
-
-        if (DSEvent != null) {
-            OnDisconnectServer();
-        }
-
-    }
-
-    private static void OnServerSwitchEvent() {
+    @Subscribe
+    public void OnServerSwitchEvent(ServerSwitchEvent event) {
         if (Minecraft.getInstance().playerController.getCurrentGameType() == GameType.ADVENTURE) {
             InHub = true;
             VanishEnabled = false;
@@ -43,19 +29,21 @@ public class AutoVanish {
         }
     }
 
-    private static void OnMessageSend(MessageSendEvent event) {
+    @Subscribe
+    public void OnMessageSend(MessageSendEvent event) {
         if (event.getMessage().startsWith("/v") && !InHub) {
             VanishEnabled = !VanishEnabled;
         }
     }
 
-    private static void OnLoginServer() {
+    @Subscribe
+    public void OnLoginServer(LoginServerEvent event) {
         VanishEnabled = false;
         InHub = true;
     }
 
-    private static void OnDisconnectServer() {
+    @Subscribe
+    public void OnDisconnectServer(DisconnectServerEvent event) {
         VanishEnabled = false;
     }
-
 }

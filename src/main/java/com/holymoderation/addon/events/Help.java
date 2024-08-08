@@ -1,22 +1,17 @@
 package com.holymoderation.addon.events;
 
+import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.events.client.chat.MessageSendEvent;
 
 import static com.holymoderation.addon.HMManager.*;
-import static com.holymoderation.addon.SettingsManager.*;
 import static com.holymoderation.addon.Colors.*;
 
 public class Help {
 
     private static String[] messageSplit;
 
-    public static void Update() {
-        if (MSEvent != null) {
-            OnMessageSend(MSEvent);
-        }
-    }
-
-    private static void OnMessageSend(MessageSendEvent event) {
+    @Subscribe
+    public void OnMessageSend(MessageSendEvent event) {
         String message = event.getMessage();
         messageSplit = message.split(" ");
         String command = messageSplit[0];

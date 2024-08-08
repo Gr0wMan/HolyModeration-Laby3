@@ -1,12 +1,5 @@
 package com.holymoderation.addon;
 
-import net.labymod.api.event.events.client.chat.MessageReceiveEvent;
-import net.labymod.api.event.events.client.chat.MessageSendEvent;
-import net.labymod.api.event.events.client.gui.RenderGameOverlayEvent;
-import net.labymod.api.event.events.network.server.DisconnectServerEvent;
-import net.labymod.api.event.events.network.server.LoginServerEvent;
-import net.labymod.api.event.events.network.server.ServerSwitchEvent;
-
 public class SettingsManager {
 
     //Global
@@ -16,15 +9,6 @@ public class SettingsManager {
     public static boolean VanishEnabled = false;
     public static boolean InHub = false;
     //Global
-
-    //Events
-    public static RenderGameOverlayEvent RGOEvent;
-    public static ServerSwitchEvent SSEvent;
-    public static MessageReceiveEvent MREvent;
-    public static MessageSendEvent MSEvent;
-    public static LoginServerEvent LSEvent;
-    public static DisconnectServerEvent DSEvent;
-    //Events
 
     //Timer
     public static boolean TimerEnabled;
@@ -60,12 +44,12 @@ public class SettingsManager {
     //temp
     //Counter
 
-    //Vanish
+    //VanishStatus
     public static boolean VanishStatusEnabled;
     public static int VXCoords;
     public static int VYCoords;
     public static int VCustomColor;
-    //Vanish
+    //VanishStatus
 
     //Freezer
     public static boolean DupeIpEnabled;
