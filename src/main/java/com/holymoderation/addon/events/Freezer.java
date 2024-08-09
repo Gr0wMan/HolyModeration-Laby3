@@ -53,6 +53,7 @@ public class Freezer {
                     }
                     if (AutoVanishEnabled && VanishEnabled) {
                         ChatMessage("/v");
+                        VanishEnabled = false;
                     }
                     ChatMessage("/freezing " + Player);
                     ChatMessage("/checkmute " + Player);

@@ -94,6 +94,7 @@ public class HMManager {
         ChatMessage("/prova");
         if (AutoVanishEnabled && !VanishEnabled) {
             ChatMessage("/v");
+            VanishEnabled = true;
         }
         Player = null;
     }
